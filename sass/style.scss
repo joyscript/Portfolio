@@ -1,0 +1,28 @@
+// Abstracts
+@import 'abstracts/constants';
+@import 'abstracts/mixins';
+@import 'abstracts/placeholders';
+
+// Base
+@import 'base/normalize';
+@import 'base/base';
+
+// Components
+@import 'components/burger';
+@import 'components/logo';
+@import 'components/nav';
+@import 'components/switch-lng';
+@import 'components/buttons';
+@import 'components/soclist';
+@import 'components/form';
+@import 'components/modal';
+
+// Layouts
+@import 'layouts/1_header';
+@import 'layouts/2_hero';
+@import 'layouts/3_skills';
+@import 'layouts/4_portfolio';
+@import 'layouts/5_video';
+@import 'layouts/6_price';
+@import 'layouts/7_contacts';
+@import 'layouts/8_footer';

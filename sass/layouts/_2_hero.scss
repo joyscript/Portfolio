@@ -1,0 +1,15 @@
+.hero__wrapper {
+  min-height: 820px;
+  padding: 160px 80px 80px;
+  background: url('../../assets/img/header-bg.jpg') no-repeat center -90px;
+}
+
+.hero__content {
+  max-width: 500px;
+}
+
+.hero__text {
+  max-width: 470px;
+  margin-bottom: 25px;
+  @include font(2rem, 4rem, normal);
+}

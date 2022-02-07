@@ -1,0 +1,15 @@
+.portfolio__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 60px;
+}
+
+.portfolio-cards {
+  @include flex(450px);
+  row-gap: 25px;
+}
+
+.portfolio__img {
+  width: calc(450 / 1400 * 100%);
+}

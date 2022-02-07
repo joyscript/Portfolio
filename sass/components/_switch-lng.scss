@@ -1,0 +1,21 @@
+.switch-lng {
+  @include font(2rem, 5rem);
+}
+
+.switch-lng__en,
+.switch-lng__ru {
+  cursor: pointer;
+  @extend %trans;
+  @include hov {
+    color: $color-main;
+  }
+}
+
+.switch-lng__en {
+  padding-right: 4px;
+  color: $color-main;
+}
+
+.switch-lng__ru {
+  padding-left: 3px;
+}

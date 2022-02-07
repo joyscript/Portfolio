@@ -1,0 +1,17 @@
+.contacts__wrapper {
+  @include flex-col;
+  align-items: flex-end;
+  min-height: 700px;
+  padding-top: 60px;
+  background: url('../../assets/img/contacts-bg.jpg') no-repeat center center;
+}
+
+.contacts__title,
+.contacts__form {
+  width: calc(450 / 1400 * 100%);
+}
+
+.contacts__title {
+  margin-bottom: 40px;
+  text-align: left;
+}

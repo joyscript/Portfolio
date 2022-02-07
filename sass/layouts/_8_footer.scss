@@ -1,0 +1,14 @@
+.footer__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 20px;
+  @include font(2rem, 5rem, normal);
+}
+
+.footer__data {
+  min-width: 188px;
+  span {
+    margin-right: 15px;
+  }
+}

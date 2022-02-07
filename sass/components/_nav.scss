@@ -1,0 +1,9 @@
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav__link {
+  padding: 15px;
+  @include font(2rem, 2rem, normal);
+}
