@@ -7,7 +7,7 @@ body {
   font-family: 'Inter', Verdana, sans-serif;
   @include font(1.8rem, 3.6rem, normal, $color-light);
   font-style: normal;
-  background: $color-dark;
+  background: $color-dark url('../assets/img/header-bg.jpg') no-repeat center top;
 }
 
 h1,

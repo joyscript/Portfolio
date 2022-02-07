@@ -9,16 +9,16 @@
   height: 100%;
 
   &_inst {
-    background: url('../../assets/svg/footer/inst.svg') no-repeat center center;
+    background: url('../assets/svg/footer/inst.svg') no-repeat center center;
   }
   &_fb {
-    background: url('../../assets/svg/footer/fb.svg') no-repeat center center;
+    background: url('../assets/svg/footer/fb.svg') no-repeat center center;
   }
   &_twit {
-    background: url('../../assets/svg/footer/twitter.svg') no-repeat center center;
+    background: url('../assets/svg/footer/twitter.svg') no-repeat center center;
   }
   &_pint {
-    background: url('../../assets/svg/footer/pinterest.svg') no-repeat center center;
+    background: url('../assets/svg/footer/pinterest.svg') no-repeat center center;
   }
 
   @include hov {

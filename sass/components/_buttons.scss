@@ -1,6 +1,6 @@
 .button {
-  min-width: 220px;
-  min-height: 55px;
+  width: 220px;
+  height: 55px;
   padding: 5px 15px;
   @include font(2rem, 4rem, normal);
   border: 2px solid #bdae82;

@@ -412,7 +412,7 @@ body {
   font-weight: normal;
   color: #ffffff;
   font-style: normal;
-  background: #000000;
+  background: #000000 url("../assets/img/header-bg.jpg") no-repeat center top;
 }
 
 h1 {
@@ -523,8 +523,8 @@ button:hover, button:focus, button:active {
 }
 
 .button {
-  min-width: 220px;
-  min-height: 55px;
+  width: 220px;
+  height: 55px;
   padding: 5px 15px;
   font-size: 2rem;
   line-height: 4rem;
@@ -553,16 +553,16 @@ button:hover, button:focus, button:active {
   height: 100%;
 }
 .soclist__link_inst {
-  background: url("../../assets/svg/footer/inst.svg") no-repeat center center;
+  background: url("../assets/svg/footer/inst.svg") no-repeat center center;
 }
 .soclist__link_fb {
-  background: url("../../assets/svg/footer/fb.svg") no-repeat center center;
+  background: url("../assets/svg/footer/fb.svg") no-repeat center center;
 }
 .soclist__link_twit {
-  background: url("../../assets/svg/footer/twitter.svg") no-repeat center center;
+  background: url("../assets/svg/footer/twitter.svg") no-repeat center center;
 }
 .soclist__link_pint {
-  background: url("../../assets/svg/footer/pinterest.svg") no-repeat center center;
+  background: url("../assets/svg/footer/pinterest.svg") no-repeat center center;
 }
 .form {
   display: flex;
@@ -613,8 +613,8 @@ button:hover, button:focus, button:active {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 90px;
   padding: 20px;
-  background: url("../../assets/img/header-bg.jpg") no-repeat center top;
 }
 
 .header__nav {
@@ -625,7 +625,6 @@ button:hover, button:focus, button:active {
 .hero__wrapper {
   min-height: 820px;
   padding: 160px 80px 80px;
-  background: url("../../assets/img/header-bg.jpg") no-repeat center -90px;
 }
 
 .hero__content {
@@ -657,16 +656,16 @@ button:hover, button:focus, button:active {
   padding: 100px 20px 10px;
 }
 .skill-card:nth-child(1) {
-  background: url("../../assets/svg/skills/camera.svg") no-repeat center top;
+  background: url("../assets/svg/skills/camera.svg") no-repeat center top;
 }
 .skill-card:nth-child(2) {
-  background: url("../../assets/svg/skills/video.svg") no-repeat center top;
+  background: url("../assets/svg/skills/video.svg") no-repeat center top;
 }
 .skill-card:nth-child(3) {
-  background: url("../../assets/svg/skills/image.svg") no-repeat center top;
+  background: url("../assets/svg/skills/image.svg") no-repeat center top;
 }
 .skill-card:nth-child(4) {
-  background: url("../../assets/svg/skills/mic.svg") no-repeat center top;
+  background: url("../assets/svg/skills/mic.svg") no-repeat center top;
 }
 
 .skill-card__title {
@@ -679,6 +678,7 @@ button:hover, button:focus, button:active {
 
 .portfolio__buttons {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 5px;
   margin-bottom: 60px;
@@ -709,7 +709,7 @@ button:hover, button:focus, button:active {
   position: absolute;
   width: 130px;
   height: 130px;
-  background: url("../../assets/svg/play-video.svg") no-repeat;
+  background: url("../assets/svg/play-video.svg") no-repeat;
   border: none;
   cursor: pointer;
 }
@@ -760,7 +760,7 @@ button:hover, button:focus, button:active {
   align-items: flex-end;
   min-height: 700px;
   padding-top: 60px;
-  background: url("../../assets/img/contacts-bg.jpg") no-repeat center center;
+  background: url("../assets/img/contacts-bg.jpg") no-repeat center center;
 }
 
 .contacts__title,
