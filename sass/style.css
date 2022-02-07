@@ -553,16 +553,16 @@ button:hover, button:focus, button:active {
   height: 100%;
 }
 .soclist__link_inst {
-  background: url("../assets/svg/footer/inst.svg") no-repeat center center;
+  background: url("../assets/svg/soc/inst.svg") no-repeat center center;
 }
 .soclist__link_fb {
-  background: url("../assets/svg/footer/fb.svg") no-repeat center center;
+  background: url("../assets/svg/soc/fb.svg") no-repeat center center;
 }
 .soclist__link_twit {
-  background: url("../assets/svg/footer/twitter.svg") no-repeat center center;
+  background: url("../assets/svg/soc/twit.svg") no-repeat center center;
 }
 .soclist__link_pint {
-  background: url("../assets/svg/footer/pinterest.svg") no-repeat center center;
+  background: url("../assets/svg/soc/pint.svg") no-repeat center center;
 }
 .form {
   display: flex;
