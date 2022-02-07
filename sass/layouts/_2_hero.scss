@@ -5,6 +5,10 @@
     min-height: 500px;
     padding: 78px 60px 60px;
   }
+  @include media-mob {
+    min-height: 520px;
+    padding: 78px 15px 60px;
+  }
 }
 
 .hero__title {
@@ -22,9 +26,19 @@
   max-width: 470px;
   margin-bottom: 25px;
   @include font(2rem, 4rem, normal);
-  @include media-tab {
+
+  @include media-lap {
     max-width: 390px;
+  }
+
+  @include media-tab {
     margin-bottom: 60px;
     line-height: 2.4rem;
+  }
+  @include media-mob {
+    max-width: 70%;
+  }
+  @include media-sm {
+    max-width: 220px;
   }
 }

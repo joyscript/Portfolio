@@ -2,27 +2,53 @@
   @include media-tab {
     padding-bottom: 40px;
   }
+  @include media-mob {
+    padding-bottom: 0;
+  }
 }
 
 .skills__section-title {
   @include media-tab {
     margin-bottom: 45px;
   }
+  @include media-mob {
+    margin-bottom: 50px;
+  }
+  @include media-mm {
+    margin-bottom: 25px;
+  }
 }
 
 .skills-cards {
   @include flex(320px);
 
-  @include media-tab {
+  @include media-lap {
+    @include cols(2, 44px);
     justify-content: center;
-    gap: 36px 44px;
-    > * {
-      @include fbasis(300px, 728px);
+    row-gap: 36px;
+    .skill-card {
+      max-width: 350px;
+    }
+  }
+  @include media-tab {
+    .skill-card {
+      max-width: 300px;
+    }
+  }
+  @include media-mob {
+    @include flex-col(center);
+    .skill-card {
+      max-width: 100%;
     }
   }
 }
 
+// skill-card -----------------------
+
 .skill-card {
+  width: 320px;
+  max-width: 100%;
+  // outline: 1px solid blue;
   @include flex-col(center);
   padding: 100px 20px 10px;
 

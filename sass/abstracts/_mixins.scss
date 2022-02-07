@@ -1,4 +1,4 @@
-@mixin font($size, $height: $size, $weight: bold, $color: $color-light) {
+@mixin font($size, $height: $size * 2, $weight: bold, $color: $color-light) {
   font-size: $size;
   line-height: $height;
   font-weight: $weight;
@@ -20,6 +20,17 @@
 
   > * {
     flex-basis: calc($width / $content-width * 100%);
+  }
+}
+
+@mixin cols($cols, $gap) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: $gap;
+
+  > * {
+    flex-basis: calc((100% - ($cols - 1) * $gap) / $cols);
   }
 }
 
@@ -61,6 +72,12 @@
 
 @mixin media-sm {
   @media (max-width: 375px) {
+    @content;
+  }
+}
+
+@mixin media($width) {
+  @media (max-width: $width) {
     @content;
   }
 }

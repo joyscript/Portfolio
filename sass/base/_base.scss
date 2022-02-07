@@ -1,6 +1,12 @@
 html {
   font-size: 10px;
   scroll-behavior: smooth;
+  @include media-mob {
+    font-size: 9px;
+  }
+  @include media-sm {
+    font-size: 8px;
+  }
 }
 
 body {
@@ -11,8 +17,12 @@ body {
   background-image: url('../assets/img/bg-desk.jpg');
   background-repeat: no-repeat;
   background-position: center top;
+  @include media-lap {
+    background-position: 30% top;
+  }
   @include media-tab {
     background-image: url('../assets/img/bg-tab.jpg');
+    background-position: center top;
   }
 }
 
@@ -23,26 +33,26 @@ h3 {
 }
 
 h1 {
-  @include font(6rem, 12rem);
+  @include font(6rem);
   @include media-tab {
-    @include font(3.2rem, 6.4rem);
+    @include font(3.2rem);
   }
 }
 
 h2 {
-  @include font(4rem, 8rem, bold, $color-main);
+  @include font(4rem, $color: $color-main);
   @include media-tab {
     font-size: 3.2rem;
   }
 }
 
 h3 {
-  @include font(2.8rem, 5.6rem);
+  @include font(2.8rem);
   text-align: center;
 }
 
 h4 {
-  @include font(2rem, 4rem);
+  @include font(2rem);
   text-align: center;
 }
 
@@ -54,6 +64,12 @@ h4 {
   padding: 100px 20px 0;
   @include media-tab {
     padding-top: 80px;
+  }
+  @include media-mob {
+    padding-top: 50px;
+  }
+  @include media-mm {
+    padding: 40px 15px 0;
   }
 }
 

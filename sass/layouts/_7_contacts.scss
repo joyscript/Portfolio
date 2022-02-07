@@ -14,11 +14,8 @@
 
 .contacts__title,
 .contacts__form {
-  width: calc(450 / 1400 * 100%);
-  @include media-tab {
-    width: 450px;
-    max-width: 100%;
-  }
+  width: 450px;
+  max-width: 100%;
 }
 
 .contacts__title {

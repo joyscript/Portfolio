@@ -7,23 +7,33 @@
 }
 
 .price-cards {
-  @include flex(450px);
+  @include cols(3, 25px);
+
+  @include media-lap {
+    @include cols(2, 50px);
+    justify-content: center;
+  }
 
   @include media-tab {
     @include flex-col(center);
-    gap: 50px;
+    .price-card {
+      width: 420px;
+    }
+  }
+
+  @include media-mob {
+    gap: 30px;
   }
 }
 
+// price-card
+
 .price-card {
+  width: 450px;
+  max-width: 100%;
   @include flex-col(center);
   padding: 40px;
   border: 3px solid $color-main;
-
-  @include media-tab {
-    width: 420px;
-    max-width: 100%;
-  }
 }
 
 .price-card__title {

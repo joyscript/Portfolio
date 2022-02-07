@@ -5,19 +5,28 @@
   gap: 5px;
   margin: 0 auto 60px;
 
-  @include media-tab {
+  @include media-lap {
     max-width: 445px;
+  }
+  @include media-mob {
+    margin-bottom: 40px;
   }
 }
 
 .portfolio-cards {
   @include flex(450px);
-  justify-content: center;
-  gap: 25px;
+  row-gap: 25px;
+  @include media-lap {
+    justify-content: center;
+    column-gap: 25px;
+  }
 }
 
 .portfolio__img {
   width: calc(450 / 1400 * 100%);
+  @include media-lap {
+    width: calc(50% - 12.5px);
+  }
   @include media-tab {
     width: 100%;
   }
