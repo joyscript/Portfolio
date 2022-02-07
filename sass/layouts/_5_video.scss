@@ -1,20 +1,44 @@
+.video__wrapper {
+  @include media-tab {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 .videoplayer {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @include media-tab {
+    width: 100%;
+    height: 418px;
+  }
+}
+
+.videoplayer__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: -5px 0;
 }
 
 .videoplayer__btn {
   position: absolute;
   width: 130px;
   height: 130px;
-  background: url('../assets/svg/play-video.svg') no-repeat;
+  background: transparent;
   border: none;
   cursor: pointer;
   @extend %trans;
 
   @include hov {
     @extend %filter;
+  }
+
+  @include media-tab {
+    width: 65px;
+    height: 65px;
   }
 }

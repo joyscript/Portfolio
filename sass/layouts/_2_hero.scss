@@ -1,6 +1,17 @@
 .hero__wrapper {
   min-height: 820px;
   padding: 160px 80px 80px;
+  @include media-tab {
+    min-height: 500px;
+    padding: 78px 60px 60px;
+  }
+}
+
+.hero__title {
+  margin-bottom: 10px;
+  @include media-tab {
+    margin-bottom: 20px;
+  }
 }
 
 .hero__content {
@@ -11,4 +22,9 @@
   max-width: 470px;
   margin-bottom: 25px;
   @include font(2rem, 4rem, normal);
+  @include media-tab {
+    max-width: 390px;
+    margin-bottom: 60px;
+    line-height: 2.4rem;
+  }
 }

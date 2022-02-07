@@ -1,0 +1,7 @@
+.burger {
+  display: none;
+
+  @include media-tab {
+    display: block;
+  }
+}

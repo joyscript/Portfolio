@@ -1,0 +1,16 @@
+.section-title {
+  width: 50%;
+  margin: 0 auto 60px;
+  text-align: center;
+  background: linear-gradient(to bottom, transparent 39px, $color-main 39px, $color-main 41px, transparent 41px);
+
+  h2 {
+    display: inline;
+    padding: 0 20px;
+    background: $color-dark;
+  }
+
+  @include media-tab {
+    margin-bottom: 50px;
+  }
+}

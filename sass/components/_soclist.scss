@@ -1,25 +1,14 @@
 .soclist {
   display: flex;
+  align-items: center;
   gap: 20px;
   height: 50px;
 }
 
 .soclist__link {
   width: 32px;
-  height: 100%;
-
-  &_inst {
-    background: url('../assets/svg/soc/inst.svg') no-repeat center center;
-  }
-  &_fb {
-    background: url('../assets/svg/soc/fb.svg') no-repeat center center;
-  }
-  &_twit {
-    background: url('../assets/svg/soc/twit.svg') no-repeat center center;
-  }
-  &_pint {
-    background: url('../assets/svg/soc/pint.svg') no-repeat center center;
-  }
+  height: 32px;
+  @extend %trans;
 
   @include hov {
     @extend %filter;

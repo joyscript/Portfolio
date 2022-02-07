@@ -4,14 +4,34 @@
   min-height: 700px;
   padding-top: 60px;
   background: url('../assets/img/contacts-bg.jpg') no-repeat center center;
+
+  @include media-tab {
+    min-height: 600px;
+    align-items: center;
+    background: url('../assets/img/contacts-bg-sm.jpg') no-repeat center center;
+  }
 }
 
 .contacts__title,
 .contacts__form {
   width: calc(450 / 1400 * 100%);
+  @include media-tab {
+    width: 450px;
+    max-width: 100%;
+  }
 }
 
 .contacts__title {
   margin-bottom: 40px;
   text-align: left;
+  @include media-tab {
+    line-height: 6.4rem;
+    text-align: center;
+  }
+}
+
+.contacts__form {
+  @include media-tab {
+    align-items: center;
+  }
 }

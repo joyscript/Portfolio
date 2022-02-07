@@ -32,3 +32,35 @@
   flex-direction: column;
   align-items: $pos;
 }
+
+// media -------------------------------------------------
+
+@mixin media-lap {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin media-tab {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin media-mob {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin media-mm {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin media-sm {
+  @media (max-width: 375px) {
+    @content;
+  }
+}

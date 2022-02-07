@@ -4,9 +4,24 @@
   justify-content: space-between;
   height: 90px;
   padding: 20px;
+
+  @include media-tab {
+    padding: 20px 64px 20px 60px;
+  }
+}
+
+.header__logo {
+  margin-right: auto;
 }
 
 .header__nav {
-  margin-left: auto;
   margin-right: 18px;
+
+  @include media-tab {
+    display: none;
+  }
+}
+
+.header__burger {
+  margin-left: 32px;
 }

@@ -26,7 +26,7 @@
   <body>
     <header class="header">
       <div class="wrapper header__wrapper">
-        <a href="#" class="logo"><img src="./assets/svg/logo.svg" alt="Logo" /></a>
+        <a href="#" class="logo header__logo"><img src="./assets/svg/logo.svg" alt="Logo" /></a>
 
         <nav class="header__nav">
           <ul class="nav">
@@ -43,6 +43,8 @@
           <span>/</span>
           <span class="switch-lng__ru">ru</span>
         </div>
+
+        <div class="burger header__burger"><img src="./assets/svg/burger.svg" alt="Show menu" /></div>
       </div>
     </header>
 
@@ -50,7 +52,7 @@
       <section id="hero">
         <div class="wrapper hero__wrapper">
           <div class="hero__content">
-            <h1>Alexa Rise</h1>
+            <h1 class="hero__title">Alexa Rise</h1>
             <p class="hero__text">
               Save sincere emotions, romantic feelings and happy moments of life together with professional photographer Alexa Rise
             </p>
@@ -60,8 +62,8 @@
       </section>
 
       <section id="skills">
-        <div class="wrapper">
-          <div class="section-title">
+        <div class="wrapper skills__wrapper">
+          <div class="section-title skills__section-title">
             <h2>Skills</h2>
           </div>
 
@@ -80,7 +82,7 @@
             </div>
             <div class="skill-card">
               <h4 class="skill-card__title">Audio</h4>
-              <p class="skill-card__text">Professional sounds recording for video, advertising, portfolio</p>
+              <p class="skill-card__text">Professional sounds recording for&nbsp;video, advertising, portfolio</p>
             </div>
           </div>
         </div>
@@ -111,14 +113,14 @@
       </section>
 
       <section id="video">
-        <div class="wrapper">
+        <div class="wrapper video__wrapper">
           <div class="section-title">
             <h2>Video</h2>
           </div>
 
           <div class="videoplayer">
             <img class="videoplayer__img" src="./assets/img/video.jpg" alt="Video" />
-            <button class="videoplayer__btn"></button>
+            <button class="videoplayer__btn"><img src="./assets/svg/play-video.svg" alt="Play video" /></button>
           </div>
         </div>
       </section>
@@ -131,7 +133,7 @@
 
           <div class="price-cards">
             <div class="price-card">
-              <h3>Standard</h3>
+              <h3 class="price-card__title">Standard</h3>
               <p class="price-card__price">500 $</p>
               <div class="price-card__text">
                 <span>One location</span>
@@ -143,7 +145,7 @@
               <button class="price-card__btn button button_colored">Order shooting</button>
             </div>
             <div class="price-card">
-              <h3>Premium</h3>
+              <h3 class="price-card__title">Premium</h3>
               <p class="price-card__price">700 $</p>
               <div class="price-card__text">
                 <span>One or two locations</span>
@@ -155,7 +157,7 @@
               <button class="price-card__btn button button_colored">Order shooting</button>
             </div>
             <div class="price-card">
-              <h3>Gold</h3>
+              <h3 class="price-card__title">Gold</h3>
               <p class="price-card__price">1000 $</p>
               <div class="price-card__text">
                 <span>Three locations or more</span>
@@ -193,10 +195,18 @@
         </div>
         <a class="footer__link" href="https://rs.school/js-stage0/" target="_blank">Rolling Scopes School</a>
         <ul class="soclist">
-          <li><a class="soclist__link soclist__link_inst" href="#!"></a></li>
-          <li><a class="soclist__link soclist__link_fb" href="#!"></a></li>
-          <li><a class="soclist__link soclist__link_twit" href="#!"></a></li>
-          <li><a class="soclist__link soclist__link_pint" href="#!"></a></li>
+          <li class="soclist__link">
+            <a href="#!"><img src="./assets/svg/soc/inst.svg" alt="Instagram" /></a>
+          </li>
+          <li class="soclist__link">
+            <a href="#!"><img src="./assets/svg/soc/fb.svg" alt="Facebook" /></a>
+          </li>
+          <li class="soclist__link">
+            <a href="#!"><img src="./assets/svg/soc/twit.svg" alt="Twitter" /></a>
+          </li>
+          <li class="soclist__link">
+            <a href="#!"><img src="./assets/svg/soc/pint.svg" alt="Pinterest" /></a>
+          </li>
         </ul>
       </div>
     </footer>
