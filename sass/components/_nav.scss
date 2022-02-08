@@ -1,9 +1,42 @@
 .nav {
   display: flex;
   align-items: center;
+
+  @include media-tab {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 10;
+    @include flex-col;
+    gap: 16px;
+    width: 620px;
+    height: 100vh;
+    padding-top: 134px;
+    padding-left: 112px;
+    background: $color-dark;
+    transition: 0.5s;
+
+    &_active {
+      right: 0;
+    }
+  }
+
+  @include media(760px) {
+    width: 100vw;
+  }
+  @include media-mob {
+    padding: 100px;
+  }
+  @include media-sm {
+    padding: 70px 50px;
+  }
 }
 
 .nav__link {
   padding: 15px;
   @include font(2rem, 2rem, normal);
+
+  @include media-tab {
+    @include font(3.5rem, 4.3rem, normal);
+  }
 }

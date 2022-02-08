@@ -5,10 +5,10 @@
   padding: 20px;
 
   @include media-tab {
-    padding: 20px 64px 20px 60px;
+    padding: 20px 146px 20px 60px;
   }
   @include media-mob {
-    padding: 10px 15px;
+    padding: 10px 100px 10px 15px;
   }
 }
 
@@ -18,12 +18,4 @@
 
 .header__nav {
   margin-right: 18px;
-
-  @include media-tab {
-    display: none;
-  }
-}
-
-.header__burger {
-  margin-left: 32px;
 }
