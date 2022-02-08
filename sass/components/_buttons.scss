@@ -4,16 +4,13 @@
   height: 55px;
   padding: 5px 15px;
   @include font(2rem, 4rem, normal);
+  color: $color-main;
+  background: transparent;
   border: 2px solid #bdae82;
   cursor: pointer;
 
   &_colored {
     color: $color-dark;
     background: $color-main;
-  }
-
-  &_bordered {
-    color: $color-main;
-    background: transparent;
   }
 }

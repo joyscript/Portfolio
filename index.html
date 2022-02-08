@@ -21,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="./sass/style.css" />
-    <script src="./js/index.js" defer></script>
+    <script type="module" src="index.js" defer></script>
   </head>
 
   <body>
@@ -100,20 +100,13 @@
           </div>
 
           <div class="portfolio__buttons">
-            <button class="button button_bordered">Winter</button>
-            <button class="button button_bordered">Spring</button>
-            <button class="button button_bordered">Summer</button>
-            <button class="button button_colored">Autumn</button>
+            <button class="button" data-season="winter">Winter</button>
+            <button class="button" data-season="spring">Spring</button>
+            <button class="button" data-season="summer">Summer</button>
+            <button class="button" data-season="autumn">Autumn</button>
           </div>
 
-          <div class="portfolio-cards">
-            <img src="./assets/img/portfolio/1.jpg" alt="Photo" class="portfolio__img" />
-            <img src="./assets/img/portfolio/2.jpg" alt="Photo" class="portfolio__img" />
-            <img src="./assets/img/portfolio/3.jpg" alt="Photo" class="portfolio__img" />
-            <img src="./assets/img/portfolio/4.jpg" alt="Photo" class="portfolio__img" />
-            <img src="./assets/img/portfolio/5.jpg" alt="Photo" class="portfolio__img" />
-            <img src="./assets/img/portfolio/6.jpg" alt="Photo" class="portfolio__img" />
-          </div>
+          <div class="portfolio__images"></div>
         </div>
       </section>
 

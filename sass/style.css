@@ -663,16 +663,14 @@ button:hover, button:focus, button:active {
   line-height: 4rem;
   font-weight: normal;
   color: #ffffff;
+  color: #bdae82;
+  background: transparent;
   border: 2px solid #bdae82;
   cursor: pointer;
 }
 .button_colored {
   color: #000000;
   background: #bdae82;
-}
-.button_bordered {
-  color: #bdae82;
-  background: transparent;
 }
 
 .section-title {
@@ -843,7 +841,7 @@ button:hover, button:focus, button:active {
 }
 @media (max-width: 375px) {
   .hero__text {
-    max-width: 220px;
+    max-width: 230px;
   }
 }
 
@@ -977,17 +975,17 @@ button:hover, button:focus, button:active {
   }
 }
 
-.portfolio-cards {
+.portfolio__images {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   row-gap: 25px;
 }
-.portfolio-cards > * {
+.portfolio__images > * {
   flex-basis: 32.1428571429%;
 }
 @media (max-width: 1024px) {
-  .portfolio-cards {
+  .portfolio__images {
     justify-content: center;
     column-gap: 25px;
   }
