@@ -1,5 +1,9 @@
 .switch-lng {
   @include font(2rem, 5rem);
+
+  @include media-mob {
+    line-height: 40px;
+  }
 }
 
 .switch-lng__en,

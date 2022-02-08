@@ -409,11 +409,6 @@ html {
     font-size: 9px;
   }
 }
-@media (max-width: 375px) {
-  html {
-    font-size: 8px;
-  }
-}
 
 body {
   font-family: "Inter", Verdana, sans-serif;
@@ -518,7 +513,7 @@ button:hover, button:focus, button:active {
 
 .logo {
   width: 50px;
-  height: 50px;
+  height: 40px;
 }
 .nav {
   display: flex;
@@ -557,7 +552,7 @@ button:hover, button:focus, button:active {
 }
 @media (max-width: 375px) {
   .nav {
-    padding: 70px 50px;
+    padding: 60px 50px;
   }
 }
 
@@ -582,6 +577,11 @@ button:hover, button:focus, button:active {
   line-height: 5rem;
   font-weight: bold;
   color: #ffffff;
+}
+@media (max-width: 600px) {
+  .switch-lng {
+    line-height: 40px;
+  }
 }
 
 .switch-lng__en,
@@ -624,8 +624,9 @@ button:hover, button:focus, button:active {
 }
 @media (max-width: 600px) {
   .burger {
-    top: 22px;
+    top: 21px;
     right: 15px;
+    transform: scale(0.9);
   }
 }
 
@@ -637,6 +638,7 @@ button:hover, button:focus, button:active {
 
 .burger_active {
   position: fixed;
+  transform: scale(0.8);
 }
 .burger_active .burger__line {
   width: 60px;
@@ -773,7 +775,7 @@ button:hover, button:focus, button:active {
 }
 @media (max-width: 600px) {
   .header__wrapper {
-    padding: 10px 100px 10px 15px;
+    padding: 15px 90px 15px 15px;
   }
 }
 
@@ -934,7 +936,13 @@ button:hover, button:focus, button:active {
 }
 @media (max-width: 768px) {
   .skill-card {
+    width: 300px;
     padding: 80px 10px 40px 10px;
+  }
+}
+@media (max-width: 600px) {
+  .skill-card {
+    padding: 80px 15px 20px 15px;
   }
 }
 

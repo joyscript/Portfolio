@@ -48,7 +48,6 @@
 .skill-card {
   width: 320px;
   max-width: 100%;
-  // outline: 1px solid blue;
   @include flex-col(center);
   padding: 100px 20px 10px;
 
@@ -66,7 +65,11 @@
   }
 
   @include media-tab {
+    width: 300px;
     padding: 80px 10px 40px 10px;
+  }
+  @include media-mob {
+    padding: 80px 15px 20px 15px;
   }
 }
 
