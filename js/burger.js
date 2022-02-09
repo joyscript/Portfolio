@@ -3,10 +3,10 @@ export const addBurgerClickHandler = () => {
   const nav = document.querySelector('.nav');
 
   const toggleMenu = () => {
-    burger.classList.toggle('burger_active');
-    nav.classList.toggle('nav_active');
+    burger.classList.toggle('active');
+    nav.classList.toggle('active');
 
-    if (nav.classList.contains('nav_active')) {
+    if (nav.classList.contains('active')) {
       window.addEventListener('click', closeMenu);
     } else {
       window.removeEventListener('click', closeMenu);

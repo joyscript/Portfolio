@@ -535,7 +535,7 @@ button:hover, button:focus, button:active {
     background: #000000;
     transition: 0.5s;
   }
-  .nav_active {
+  .nav.active {
     right: 0;
   }
 }
@@ -631,21 +631,21 @@ button:hover, button:focus, button:active {
   background: #ffffff;
 }
 
-.burger_active {
+.burger.active {
   position: fixed;
   transform: scale(0.8);
 }
-.burger_active .burger__line {
+.burger.active .burger__line {
   width: 60px;
   height: 2px;
 }
-.burger_active .burger__line:nth-child(1) {
+.burger.active .burger__line:nth-child(1) {
   transform: rotate(-45deg) translate(-13px, 6px);
 }
-.burger_active .burger__line:nth-child(2) {
+.burger.active .burger__line:nth-child(2) {
   opacity: 0;
 }
-.burger_active .burger__line:nth-child(3) {
+.burger.active .burger__line:nth-child(3) {
   transform: rotate(45deg) translate(-12px, -5px);
 }
 
