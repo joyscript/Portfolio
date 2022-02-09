@@ -1,0 +1,30 @@
+.light-theme {
+  .skills,
+  .portfolio,
+  .video,
+  .price {
+    background-color: $color-light;
+    color: $color-dark;
+
+    h3,
+    h4 {
+      color: $color-dark;
+    }
+  }
+
+  .section-title {
+    background: linear-gradient(to bottom, transparent 39px, $color-dark 39px, $color-dark 41px, transparent 41px);
+    h2 {
+      color: $color-dark;
+      background-color: $color-light;
+    }
+  }
+
+  .portfolio__buttons .button {
+    color: $color-dark;
+    @include hov {
+      color: $color-light;
+      background-color: $color-main;
+    }
+  }
+}

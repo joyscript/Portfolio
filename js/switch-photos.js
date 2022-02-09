@@ -1,5 +1,5 @@
-export const renderPortfolioImages = () => {
-  const portfolioBtns = document.querySelectorAll('.portfolio__buttons .button');
+export const switchPhotos = () => {
+  const portfolioBtns = document.querySelector('.portfolio__buttons');
   const portfolioImages = document.querySelector('.portfolio__images');
 
   const seasons = ['winter', 'spring', 'summer', 'autumn'];
@@ -15,10 +15,10 @@ export const renderPortfolioImages = () => {
     });
   };
 
-  const changeActiveBtn = (clickedBtn) => {
-    const activeBtn = document.querySelector('.portfolio__buttons .button_colored');
-    if (activeBtn) activeBtn.classList.remove('button_colored');
-    clickedBtn.classList.add('button_colored');
+  const changeActiveBtn = (curActiveBtn) => {
+    const prevActiveBtn = document.querySelector('.portfolio__buttons .button_colored');
+    if (prevActiveBtn) prevActiveBtn.classList.remove('button_colored');
+    curActiveBtn.classList.add('button_colored');
   };
 
   const renderImages = (season) => {
@@ -26,23 +26,23 @@ export const renderPortfolioImages = () => {
     seasonImages[season].forEach((img) => portfolioImages.append(img));
   };
 
-  preloadImages();
+  portfolioBtns.addEventListener('click', (e) => {
+    if (e.target.classList.contains('button')) {
+      const clickedBtn = e.target;
+      const season = clickedBtn.dataset.season;
 
-  portfolioBtns.forEach((btn) =>
-    btn.addEventListener('click', () => {
-      const season = btn.dataset.season;
-
-      changeActiveBtn(btn);
+      changeActiveBtn(clickedBtn);
       renderImages(season);
       localStorage.setItem('season', season);
-    })
-  );
+    }
+  });
 
   window.addEventListener('load', () => {
     const season = localStorage.getItem('season') || 'autumn';
-    const clickedBtn = document.querySelector(`.portfolio__buttons .button[data-season=${season}]`);
+    const curActiveBtn = document.querySelector(`.button[data-season=${season}]`);
 
-    changeActiveBtn(clickedBtn);
+    preloadImages();
+    changeActiveBtn(curActiveBtn);
     renderImages(season);
   });
 };

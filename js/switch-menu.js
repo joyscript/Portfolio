@@ -1,4 +1,4 @@
-export const addBurgerClickHandler = () => {
+export const switchMenu = () => {
   const burger = document.querySelector('.burger');
   const nav = document.querySelector('.nav');
 

@@ -27,7 +27,7 @@
   <body>
     <header class="header">
       <div class="wrapper header__wrapper">
-        <a href="#" class="logo header__logo"><img src="./assets/svg/logo1.svg" alt="Logo" /></a>
+        <a href="#" class="logo header__logo"><img src="./assets/svg/logo.svg" alt="Logo" /></a>
 
         <nav class="header__nav">
           <ul class="nav">
@@ -50,11 +50,15 @@
           <span>/</span>
           <span class="switch-lng__elem" data-lang="ru">ru</span>
         </div>
+
+        <div class="switch-theme">
+          <img class="switch-theme__img" src="./assets/svg/sun.svg" alt="Switch theme" />
+        </div>
       </div>
     </header>
 
     <main>
-      <section id="hero">
+      <section class="hero" id="hero">
         <div class="wrapper hero__wrapper">
           <div class="hero__content">
             <h1 class="hero__title" data-int="hero-title">Alexa Rise</h1>
@@ -66,7 +70,7 @@
         </div>
       </section>
 
-      <section id="skills">
+      <section class="skills" id="skills">
         <div class="wrapper skills__wrapper">
           <div class="section-title skills__section-title">
             <h2 data-int="skills">Skills</h2>
@@ -93,7 +97,7 @@
         </div>
       </section>
 
-      <section id="portfolio">
+      <section class="portfolio" id="portfolio">
         <div class="wrapper">
           <div class="section-title">
             <h2 data-int="portfolio">Portfolio</h2>
@@ -110,7 +114,7 @@
         </div>
       </section>
 
-      <section id="video">
+      <section class="video" id="video">
         <div class="wrapper video__wrapper">
           <div class="section-title video__section-title">
             <h2 data-int="video">Video</h2>
@@ -123,7 +127,7 @@
         </div>
       </section>
 
-      <section id="price">
+      <section class="price" id="price">
         <div class="wrapper price__wrapper">
           <div class="section-title">
             <h2 data-int="price">Price</h2>
@@ -170,7 +174,7 @@
         </div>
       </section>
 
-      <section id="contacts">
+      <section class="contacts" id="contacts">
         <div class="wrapper contacts__wrapper">
           <h2 class="contacts__title" data-int="contact-me">Contact me</h2>
 
@@ -178,7 +182,7 @@
             <input name="email" type="email" placeholder="E-mail" data-int="email" autocomplete="on" />
             <input name="phone" type="tel" placeholder="Phone" data-int="phone" autocomplete="on" />
             <textarea name="message" cols="30" rows="10" placeholder="Message" data-int="message" autocomplete="on"></textarea>
-            <button class="button button_colored" data-int="send-message">Send message</button>
+            <button type="button" class="button button_colored" data-int="send-message">Send message</button>
           </form>
         </div>
       </section>

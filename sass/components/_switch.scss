@@ -18,9 +18,24 @@
   }
   &:last-child {
     padding-left: 3px;
+    padding-right: 15px;
   }
 
   &.active {
     color: $color-main;
+  }
+}
+
+.switch-theme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 45px;
+  padding-left: 15px;
+  cursor: pointer;
+  @extend %trans;
+  @include hov {
+    @extend %filter;
   }
 }

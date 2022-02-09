@@ -5,12 +5,12 @@ h3 {
 }
 
 .videoplayer__btn, .soclist__link, .form input,
-.form textarea, .burger__line, .switch-lng__elem, a,
+.form textarea, .burger__line, .switch-theme, .switch-lng__elem, a,
 button {
   transition: all 0.3s ease-out;
 }
 
-.videoplayer__btn:hover, .videoplayer__btn:focus, .videoplayer__btn:active, .soclist__link:hover, .soclist__link:focus, .soclist__link:active, .logo:hover, .logo:focus, .logo:active {
+.videoplayer__btn:hover, .videoplayer__btn:focus, .videoplayer__btn:active, .soclist__link:hover, .soclist__link:focus, .soclist__link:active, .switch-theme:hover, .switch-theme:focus, .switch-theme:active, .logo:hover, .logo:focus, .logo:active {
   filter: invert(15%) sepia(17%) saturate(592%) hue-rotate(7deg) brightness(86%) contrast(86%);
 }
 
@@ -602,11 +602,21 @@ button:hover, button:focus, button:active {
 }
 .switch-lng__elem:last-child {
   padding-left: 3px;
+  padding-right: 15px;
 }
 .switch-lng__elem.active {
   color: #bdae82;
 }
 
+.switch-theme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 45px;
+  padding-left: 15px;
+  cursor: pointer;
+}
 .burger {
   display: none;
 }
@@ -1233,6 +1243,38 @@ button:hover, button:focus, button:active {
   .footer__link {
     margin-bottom: 20px;
   }
+}
+
+.light-theme .skills,
+.light-theme .portfolio,
+.light-theme .video,
+.light-theme .price {
+  background-color: #ffffff;
+  color: #000000;
+}
+.light-theme .skills h3,
+.light-theme .skills h4,
+.light-theme .portfolio h3,
+.light-theme .portfolio h4,
+.light-theme .video h3,
+.light-theme .video h4,
+.light-theme .price h3,
+.light-theme .price h4 {
+  color: #000000;
+}
+.light-theme .section-title {
+  background: linear-gradient(to bottom, transparent 39px, #000000 39px, #000000 41px, transparent 41px);
+}
+.light-theme .section-title h2 {
+  color: #000000;
+  background-color: #ffffff;
+}
+.light-theme .portfolio__buttons .button {
+  color: #000000;
+}
+.light-theme .portfolio__buttons .button:hover, .light-theme .portfolio__buttons .button:focus, .light-theme .portfolio__buttons .button:active {
+  color: #ffffff;
+  background-color: #bdae82;
 }
 
 /*# sourceMappingURL=style.css.map */

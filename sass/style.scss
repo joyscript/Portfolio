@@ -10,13 +10,12 @@
 // Components
 @import 'components/logo';
 @import 'components/nav';
-@import 'components/switch-lng';
+@import 'components/switch';
 @import 'components/burger';
 @import 'components/buttons';
 @import 'components/section-title';
 @import 'components/form';
 @import 'components/soclist';
-@import 'components/modal';
 
 // Layouts
 @import 'layouts/1_header';
@@ -27,3 +26,6 @@
 @import 'layouts/6_price';
 @import 'layouts/7_contacts';
 @import 'layouts/8_footer';
+
+// ------------------------
+@import 'base/light-theme';
