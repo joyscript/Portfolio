@@ -28,7 +28,7 @@
     padding: 100px;
   }
   @include media-sm {
-    padding: 60px 50px;
+    padding: 60px;
   }
 }
 
@@ -38,5 +38,8 @@
 
   @include media-tab {
     @include font(3.5rem, 4.3rem, normal);
+  }
+  @include media-mm {
+    @include font(3rem, 4rem, normal);
   }
 }
