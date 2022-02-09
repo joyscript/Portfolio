@@ -5,8 +5,7 @@ h3 {
 }
 
 .videoplayer__btn, .soclist__link, .form input,
-.form textarea, .burger__line, .switch-lng__en,
-.switch-lng__ru, a,
+.form textarea, .burger__line, .switch-lng__elem, a,
 button {
   transition: all 0.3s ease-out;
 }
@@ -584,24 +583,20 @@ button:hover, button:focus, button:active {
   }
 }
 
-.switch-lng__en,
-.switch-lng__ru {
+.switch-lng__elem {
   cursor: pointer;
 }
-.switch-lng__en:hover, .switch-lng__en:focus, .switch-lng__en:active,
-.switch-lng__ru:hover,
-.switch-lng__ru:focus,
-.switch-lng__ru:active {
+.switch-lng__elem:hover, .switch-lng__elem:focus, .switch-lng__elem:active {
   color: #bdae82;
 }
-
-.switch-lng__en {
+.switch-lng__elem:first-child {
   padding-right: 4px;
-  color: #bdae82;
 }
-
-.switch-lng__ru {
+.switch-lng__elem:last-child {
   padding-left: 3px;
+}
+.switch-lng__elem.active {
+  color: #bdae82;
 }
 
 .burger {

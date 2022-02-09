@@ -6,20 +6,21 @@
   }
 }
 
-.switch-lng__en,
-.switch-lng__ru {
+.switch-lng__elem {
   cursor: pointer;
   @extend %trans;
   @include hov {
     color: $color-main;
   }
-}
 
-.switch-lng__en {
-  padding-right: 4px;
-  color: $color-main;
-}
+  &:first-child {
+    padding-right: 4px;
+  }
+  &:last-child {
+    padding-left: 3px;
+  }
 
-.switch-lng__ru {
-  padding-left: 3px;
+  &.active {
+    color: $color-main;
+  }
 }

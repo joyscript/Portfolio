@@ -21,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="./sass/style.css" />
-    <script type="module" src="index.js" defer></script>
+    <script type="module" src="index.js"></script>
   </head>
 
   <body>
@@ -31,11 +31,11 @@
 
         <nav class="header__nav">
           <ul class="nav">
-            <li><a href="#skills" class="nav__link">Skills</a></li>
-            <li><a href="#portfolio" class="nav__link">Portfolio</a></li>
-            <li><a href="#video" class="nav__link">Video</a></li>
-            <li><a href="#price" class="nav__link">Price</a></li>
-            <li><a href="#contacts" class="nav__link">Contacts</a></li>
+            <li><a href="#skills" class="nav__link" data-int="skills">Skills</a></li>
+            <li><a href="#portfolio" class="nav__link" data-int="portfolio">Portfolio</a></li>
+            <li><a href="#video" class="nav__link" data-int="video">Video</a></li>
+            <li><a href="#price" class="nav__link" data-int="price">Price</a></li>
+            <li><a href="#contacts" class="nav__link" data-int="contacts">Contacts</a></li>
           </ul>
 
           <div class="burger">
@@ -46,9 +46,9 @@
         </nav>
 
         <div class="switch-lng">
-          <span class="switch-lng__en">en</span>
+          <span class="switch-lng__elem" data-lang="en">en</span>
           <span>/</span>
-          <span class="switch-lng__ru">ru</span>
+          <span class="switch-lng__elem" data-lang="ru">ru</span>
         </div>
       </div>
     </header>
@@ -57,11 +57,11 @@
       <section id="hero">
         <div class="wrapper hero__wrapper">
           <div class="hero__content">
-            <h1 class="hero__title">Alexa Rise</h1>
-            <p class="hero__text">
+            <h1 class="hero__title" data-int="hero-title">Alexa Rise</h1>
+            <p class="hero__text" data-int="hero-text">
               Save sincere emotions, romantic feelings and happy moments of life together with professional photographer Alexa Rise
             </p>
-            <button class="button button_colored">Hire me</button>
+            <button class="button button_colored" data-int="hire">Hire me</button>
           </div>
         </div>
       </section>
@@ -69,25 +69,25 @@
       <section id="skills">
         <div class="wrapper skills__wrapper">
           <div class="section-title skills__section-title">
-            <h2>Skills</h2>
+            <h2 data-int="skills">Skills</h2>
           </div>
 
           <div class="skills-cards">
             <div class="skill-card">
-              <h4 class="skill-card__title">Digital photography</h4>
-              <p class="skill-card__text">High-quality photos in the studio and on the nature</p>
+              <h4 class="skill-card__title" data-int="skill-title-1">Digital photography</h4>
+              <p class="skill-card__text" data-int="skill-text-1">High-quality photos in the studio and on the nature</p>
             </div>
             <div class="skill-card">
-              <h4 class="skill-card__title">Video shooting</h4>
-              <p class="skill-card__text">Capture your moments so that they always stay with you</p>
+              <h4 class="skill-card__title" data-int="skill-title-2">Video shooting</h4>
+              <p class="skill-card__text" data-int="skill-text-2">Capture your moments so that they always stay with you</p>
             </div>
             <div class="skill-card">
-              <h4 class="skill-card__title">Retouch</h4>
-              <p class="skill-card__text">I strive to make photography surpass reality</p>
+              <h4 class="skill-card__title" data-int="skill-title-3">Retouch</h4>
+              <p class="skill-card__text" data-int="skill-text-3">I strive to make photography surpass reality</p>
             </div>
             <div class="skill-card">
-              <h4 class="skill-card__title">Audio</h4>
-              <p class="skill-card__text">Professional sounds recording for&nbsp;video, advertising, portfolio</p>
+              <h4 class="skill-card__title" data-int="skill-title-4">Audio</h4>
+              <p class="skill-card__text" data-int="skill-text-4">Professional sounds recording for&nbsp;video, advertising, portfolio</p>
             </div>
           </div>
         </div>
@@ -96,14 +96,14 @@
       <section id="portfolio">
         <div class="wrapper">
           <div class="section-title">
-            <h2>Portfolio</h2>
+            <h2 data-int="portfolio">Portfolio</h2>
           </div>
 
           <div class="portfolio__buttons">
-            <button class="button" data-season="winter">Winter</button>
-            <button class="button" data-season="spring">Spring</button>
-            <button class="button" data-season="summer">Summer</button>
-            <button class="button" data-season="autumn">Autumn</button>
+            <button class="button" data-season="winter" data-int="winter">Winter</button>
+            <button class="button" data-season="spring" data-int="spring">Spring</button>
+            <button class="button" data-season="summer" data-int="summer">Summer</button>
+            <button class="button" data-season="autumn" data-int="autumn">Autumn</button>
           </div>
 
           <div class="portfolio__images"></div>
@@ -113,7 +113,7 @@
       <section id="video">
         <div class="wrapper video__wrapper">
           <div class="section-title video__section-title">
-            <h2>Video</h2>
+            <h2 data-int="video">Video</h2>
           </div>
 
           <div class="videoplayer">
@@ -126,7 +126,7 @@
       <section id="price">
         <div class="wrapper price__wrapper">
           <div class="section-title">
-            <h2>Price</h2>
+            <h2 data-int="price">Price</h2>
           </div>
 
           <div class="price-cards">
@@ -134,37 +134,37 @@
               <h3 class="price-card__title">Standard</h3>
               <p class="price-card__price">500 $</p>
               <div class="price-card__text">
-                <span>One location</span>
-                <span>120 photos in color</span>
-                <span>12 photos in retouch</span>
-                <span>Readiness 2-3 weeks</span>
-                <span>Make up, visage</span>
+                <span data-int="price-card-1-span-1">One location</span>
+                <span data-int="price-card-1-span-2">120 photos in color</span>
+                <span data-int="price-card-1-span-3">12 photos in retouch</span>
+                <span data-int="price-card-1-span-4">Readiness 2-3 weeks</span>
+                <span data-int="price-card-1-span-5">Make up, visage</span>
               </div>
-              <button class="price-card__btn button button_colored">Order shooting</button>
+              <button class="price-card__btn button button_colored" data-int="order">Order shooting</button>
             </div>
             <div class="price-card">
               <h3 class="price-card__title">Premium</h3>
               <p class="price-card__price">700 $</p>
               <div class="price-card__text">
-                <span>One or two locations</span>
-                <span>200 photos in color</span>
-                <span>20 photos in retouch</span>
-                <span>Readiness 1-2 weeks</span>
-                <span>Make up, visage</span>
+                <span data-int="price-card-2-span-1">One or two locations</span>
+                <span data-int="price-card-2-span-2">200 photos in color</span>
+                <span data-int="price-card-2-span-3">20 photos in retouch</span>
+                <span data-int="price-card-2-span-4">Readiness 1-2 weeks</span>
+                <span data-int="price-card-2-span-5">Make up, visage</span>
               </div>
-              <button class="price-card__btn button button_colored">Order shooting</button>
+              <button class="price-card__btn button button_colored" data-int="order">Order shooting</button>
             </div>
             <div class="price-card">
               <h3 class="price-card__title">Gold</h3>
               <p class="price-card__price">1000 $</p>
               <div class="price-card__text">
-                <span>Three locations or more</span>
-                <span>300 photos in color</span>
-                <span>50 photos in retouch</span>
-                <span>Readiness 1 week</span>
-                <span>Make up, visage, hairstyle</span>
+                <span data-int="price-card-3-span-1">Three locations or more</span>
+                <span data-int="price-card-3-span-2">300 photos in color</span>
+                <span data-int="price-card-3-span-3">50 photos in retouch</span>
+                <span data-int="price-card-3-span-4">Readiness 1 week</span>
+                <span data-int="price-card-3-span-5">Make up, visage, hairstyle</span>
               </div>
-              <button class="price-card__btn button button_colored">Order shooting</button>
+              <button class="price-card__btn button button_colored" data-int="order">Order shooting</button>
             </div>
           </div>
         </div>
@@ -172,13 +172,13 @@
 
       <section id="contacts">
         <div class="wrapper contacts__wrapper">
-          <h2 class="contacts__title">Contact me</h2>
+          <h2 class="contacts__title" data-int="contact-me">Contact me</h2>
 
           <form class="contacts__form form" action="#" method="post">
-            <input name="email" type="email" placeholder="E-mail" autocomplete="on" />
-            <input name="phone" type="tel" placeholder="Phone" autocomplete="on" />
-            <textarea name="message" cols="30" rows="10" placeholder="Message" autocomplete="on"></textarea>
-            <button class="button button_colored">Send message</button>
+            <input name="email" type="email" placeholder="E-mail" data-int="email" autocomplete="on" />
+            <input name="phone" type="tel" placeholder="Phone" data-int="phone" autocomplete="on" />
+            <textarea name="message" cols="30" rows="10" placeholder="Message" data-int="message" autocomplete="on"></textarea>
+            <button class="button button_colored" data-int="send-message">Send message</button>
           </form>
         </div>
       </section>
