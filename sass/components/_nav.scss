@@ -69,3 +69,11 @@
     }
   }
 }
+
+.light-theme .header.active {
+  .nav__link {
+    @include hov {
+      color: $color-main;
+    }
+  }
+}

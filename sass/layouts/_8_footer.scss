@@ -2,12 +2,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 50px 20px;
+  padding: 28px 20px;
   @include font(2rem, 5rem, normal);
 
   @include media-tab {
     @include flex-col(center);
-    padding: 28px 20px;
     line-height: 2.4rem;
   }
 }
@@ -17,6 +16,9 @@
     margin-right: 15px;
     @include media-tab {
       margin-right: 18px;
+    }
+    @include media-mob {
+      margin-right: 7px;
     }
   }
 

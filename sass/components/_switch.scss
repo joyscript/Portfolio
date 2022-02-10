@@ -15,13 +15,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 3px;
+  border-radius: 2px;
   cursor: pointer;
   @extend %trans;
 
   @include hov {
     color: $color-main;
-    background: rgba(0, 0, 0, 0.15);
+    background: rgba(153, 153, 153, 0.2);
     @extend %shadow;
   }
 
@@ -45,4 +45,18 @@
 
 .light-theme .switch-theme {
   padding: 4px;
+}
+
+.light-theme .header.scrolled {
+  .switch {
+    @include hov {
+      color: $color-main;
+      background: $color-light;
+      box-shadow: none;
+    }
+
+    &.active {
+      color: $color-main;
+    }
+  }
 }

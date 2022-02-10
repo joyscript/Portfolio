@@ -34,9 +34,8 @@
   @include media-lap {
     padding: 168px 60px 60px;
   }
-  @include media-mob {
-    padding-right: 15px;
-    padding-left: 15px;
+  @include media-mm {
+    padding: 150px 15px 60px;
   }
 }
 
