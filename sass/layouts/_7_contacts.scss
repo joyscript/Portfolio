@@ -1,14 +1,34 @@
+.contacts {
+  width: 100%;
+  min-height: 700px;
+  background-image: url('../assets/img/bgs/bg-contacts.jpg');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+
+  @include media(1920px) {
+    min-height: 800px;
+    background-size: cover;
+  }
+  @include media-lap {
+    min-height: 700px;
+  }
+  @include media-tab {
+    min-height: 600px;
+    background-image: url('../assets/img/bgs/bg-contacts-tab.jpg');
+    background-position: center center;
+  }
+  @include media-mob {
+    background-position: 20% center;
+  }
+}
+
 .contacts__wrapper {
   @include flex-col;
   align-items: flex-end;
-  min-height: 700px;
   padding-top: 60px;
-  background: url('../assets/img/contacts-bg.jpg') no-repeat center center;
 
   @include media-tab {
-    min-height: 600px;
     align-items: center;
-    background: url('../assets/img/contacts-bg-sm.jpg') no-repeat center center;
   }
 }
 
@@ -30,5 +50,15 @@
 .contacts__form {
   @include media-tab {
     align-items: center;
+  }
+}
+
+// -------------------------
+
+.light-theme .contacts {
+  background-image: url('../assets/img/bgs/bg-contacts-lt.jpg');
+
+  @include media-tab {
+    background-image: url('../assets/img/bgs/bg-contacts-tab-lt.jpg');
   }
 }

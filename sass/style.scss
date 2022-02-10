@@ -8,6 +8,7 @@
 @import 'base/base';
 
 // Components
+@import 'components/icons';
 @import 'components/logo';
 @import 'components/nav';
 @import 'components/switch';
@@ -16,6 +17,7 @@
 @import 'components/section-title';
 @import 'components/form';
 @import 'components/soclist';
+@import 'components/overlay';
 
 // Layouts
 @import 'layouts/1_header';
@@ -26,6 +28,3 @@
 @import 'layouts/6_price';
 @import 'layouts/7_contacts';
 @import 'layouts/8_footer';
-
-// ------------------------
-@import 'base/light-theme';

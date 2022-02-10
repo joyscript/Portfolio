@@ -1,21 +1,32 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
 .header__wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px;
 
-  @include media-tab {
+  @include media-lap {
     padding: 20px 146px 20px 60px;
   }
   @include media-mob {
     padding: 15px 90px 15px 15px;
   }
-}
-
-.header__logo {
-  margin-right: auto;
+  @include media-sm {
+    padding: 10px 90px 10px 15px;
+  }
 }
 
 .header__nav {
-  margin-right: 18px;
+  margin-left: auto;
+}
+
+.header__switch-langs {
+  margin-left: 20px;
+  margin-right: 25px;
 }

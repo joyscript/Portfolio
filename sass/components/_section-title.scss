@@ -10,6 +10,7 @@
     line-height: 80px;
     display: inline;
     padding: 0 20px;
+    color: $color-main;
     background: $color-dark;
   }
 
@@ -22,5 +23,15 @@
   }
   @include media-mm {
     margin-bottom: 25px;
+  }
+}
+
+// --------------------------
+
+.light-theme .section-title {
+  background: linear-gradient(to bottom, transparent 39px, $color-lt-dark 39px, $color-lt-dark 41px, transparent 41px);
+  h2 {
+    color: $color-lt-dark;
+    background: $color-light;
   }
 }

@@ -1,14 +1,47 @@
-.hero__wrapper {
-  min-height: 820px;
-  padding: 160px 80px 80px;
+.hero {
+  width: 100%;
+  min-height: 910px;
+  background-image: url('../assets/img/bgs/bg-hero.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+
+  @media (max-width: 1920px) and (max-height: 1080px) {
+    height: 100vh;
+  }
+  @include media(1920px) {
+    background-size: cover;
+    background-position: center center;
+  }
+  @include media(1600px) {
+    height: auto;
+  }
+  @include media-lap {
+    min-height: 750px;
+    background-position: 30% top;
+  }
   @include media-tab {
-    min-height: 500px;
-    padding: 78px 60px 60px;
+    min-height: 590px;
+    background-image: url('../assets/img/bgs/bg-hero-tab.jpg');
+    background-position: center top;
+  }
+  @include media-mm {
+    background-position: 65% top;
+  }
+}
+
+.hero__wrapper {
+  padding: 250px 80px 80px;
+  @include media-lap {
+    padding: 168px 60px 60px;
   }
   @include media-mob {
-    min-height: 520px;
-    padding: 78px 15px 60px;
+    padding-right: 15px;
+    padding-left: 15px;
   }
+}
+
+.hero__content {
+  max-width: 500px;
 }
 
 .hero__title {
@@ -16,10 +49,6 @@
   @include media-tab {
     margin-bottom: 20px;
   }
-}
-
-.hero__content {
-  max-width: 500px;
 }
 
 .hero__text {
@@ -30,7 +59,6 @@
   @include media-lap {
     max-width: 390px;
   }
-
   @include media-tab {
     margin-bottom: 60px;
     line-height: 2.4rem;
@@ -39,6 +67,15 @@
     max-width: 70%;
   }
   @include media-sm {
-    max-width: 230px;
+    max-width: 250px;
+  }
+}
+
+// -------------------------------
+
+.light-theme .hero {
+  background-image: url('../assets/img/bgs/bg-hero-lt.jpg');
+  @include media-tab {
+    background-image: url('../assets/img/bgs/bg-hero-tab-lt.jpg');
   }
 }

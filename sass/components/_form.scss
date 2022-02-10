@@ -5,8 +5,8 @@
   textarea {
     width: 100%;
     padding: 5px 20px;
-    background: rgba(0, 0, 0, 0.5);
     @include font(2rem, 4rem, normal, $color-main);
+    background: rgba(0, 0, 0, 0.5);
     border: 2px solid $color-main;
     outline: none;
     @extend %trans;
@@ -39,5 +39,19 @@
     height: 100px;
     margin-bottom: 30px;
     resize: none;
+  }
+}
+
+// -------------------
+
+.light-theme .form {
+  input,
+  textarea {
+    color: $color-lt-dark;
+    background: rgba(255, 255, 255, 0.5);
+
+    &::placeholder {
+      color: $color-lt-dark;
+    }
   }
 }

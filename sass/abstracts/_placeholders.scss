@@ -6,6 +6,10 @@
   transition: all 0.3s ease-out;
 }
 
-%filter {
-  filter: invert(15%) sepia(17%) saturate(592%) hue-rotate(7deg) brightness(86%) contrast(86%);
+%shadow {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+%shade-btn {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }

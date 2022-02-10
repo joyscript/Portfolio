@@ -13,4 +13,32 @@
     color: $color-dark;
     background: $color-main;
   }
+
+  @include hov {
+    color: $color-light;
+  }
+}
+
+.light-theme .button {
+  color: $color-lt-dark;
+  @include hov {
+    color: $color-main;
+  }
+
+  &_colored {
+    @include hov {
+      color: $color-light;
+      background: $color-main;
+    }
+  }
+
+  &_light {
+    background: $color-light;
+    border-color: $color-light;
+    @extend %shade-btn;
+    @include hov {
+      background: $color-light;
+      color: $color-main;
+    }
+  }
 }

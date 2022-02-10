@@ -1,15 +1,19 @@
 export const switchMenu = () => {
   const burger = document.querySelector('.burger');
   const nav = document.querySelector('.nav');
+  const overlay = document.querySelector('.overlay');
 
   const toggleMenu = () => {
     burger.classList.toggle('active');
     nav.classList.toggle('active');
+    overlay.classList.toggle('active');
 
     if (nav.classList.contains('active')) {
-      window.addEventListener('click', closeMenu);
+      document.body.style.overflow = 'hidden';
+      document.body.addEventListener('click', closeMenu);
     } else {
-      window.removeEventListener('click', closeMenu);
+      document.body.style.overflow = 'auto';
+      document.body.removeEventListener('click', closeMenu);
     }
   };
 

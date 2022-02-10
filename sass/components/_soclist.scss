@@ -5,12 +5,8 @@
   height: 50px;
 }
 
+.soclist__item,
 .soclist__link {
   width: 32px;
   height: 32px;
-  @extend %trans;
-
-  @include hov {
-    @extend %filter;
-  }
 }

@@ -8,19 +8,13 @@ html {
 
 body {
   font-family: 'Inter', Verdana, sans-serif;
-  @include font(1.8rem, 3.6rem, normal, $color-light);
-  font-style: normal;
+  @include font(1.8rem, 3.6rem, normal, $color: $color-light);
   background-color: $color-dark;
-  background-image: url('../assets/img/bg-desk.jpg');
-  background-repeat: no-repeat;
-  background-position: center top;
-  @include media-lap {
-    background-position: 30% top;
-  }
-  @include media-tab {
-    background-image: url('../assets/img/bg-tab.jpg');
-    background-position: center top;
-  }
+}
+
+.light-theme {
+  color: $color-lt-dark;
+  background-color: $color-light;
 }
 
 h1,
@@ -37,7 +31,7 @@ h1 {
 }
 
 h2 {
-  @include font(4rem, $color: $color-main);
+  @include font(4rem);
   @include media-tab {
     font-size: 3.2rem;
   }
@@ -74,16 +68,4 @@ a,
 button {
   outline: none;
   @extend %trans;
-}
-
-a {
-  @include hov {
-    color: $color-main;
-  }
-}
-
-button {
-  @include hov {
-    color: $color-light;
-  }
 }

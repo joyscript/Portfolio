@@ -1,12 +1,12 @@
 import { intObj } from './int-data.js';
 
 export const switchLang = () => {
-  const langElems = document.querySelectorAll('.switch-lng__elem');
+  const langSwitches = document.querySelectorAll('.switch_lang');
 
-  langElems.forEach((elem) => {
-    elem.addEventListener('click', () => {
-      const lang = elem.dataset.lang;
-      changeActiveElem(elem);
+  langSwitches.forEach((switchBtn) => {
+    switchBtn.addEventListener('click', () => {
+      const lang = switchBtn.dataset.lang;
+      changeActiveElem(switchBtn);
       translateContent(lang);
       localStorage.setItem('lang', lang);
     });
@@ -14,14 +14,14 @@ export const switchLang = () => {
 
   window.addEventListener('load', () => {
     const lang = localStorage.getItem('lang') || 'en';
-    const elem = document.querySelector(`[data-lang=${lang}]`);
-    changeActiveElem(elem);
+    const switchBtn = document.querySelector(`[data-lang=${lang}]`);
+    changeActiveElem(switchBtn);
     translateContent(lang);
   });
 };
 
 const changeActiveElem = (curActiveElem) => {
-  const prevActiveElem = document.querySelector('.switch-lng__elem.active');
+  const prevActiveElem = document.querySelector('.switch_lang.active');
   if (prevActiveElem) prevActiveElem.classList.remove('active');
   curActiveElem.classList.add('active');
 };

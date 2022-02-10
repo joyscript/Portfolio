@@ -1,9 +1,9 @@
 .burger {
   display: none;
 
-  @include media-tab {
+  @include media-lap {
     position: absolute;
-    top: 31px;
+    top: 29px;
     right: 64px;
     z-index: 100;
     display: flex;
@@ -16,9 +16,13 @@
   }
 
   @include media-mob {
-    top: 21px;
+    top: 23px;
     right: 15px;
     transform: scale(0.9);
+  }
+  @include media-sm {
+    top: 16px;
+    transform: scale(0.8);
   }
 }
 
@@ -47,4 +51,14 @@
       transform: rotate(45deg) translate(-12px, -5px);
     }
   }
+
+  @include media-sm {
+    transform: scale(0.7);
+  }
+}
+
+// ----------------------
+
+.light-theme .burger__line {
+  background: $color-lt-dark;
 }

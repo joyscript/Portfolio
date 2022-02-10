@@ -2,11 +2,11 @@
   display: flex;
   align-items: center;
 
-  @include media-tab {
+  @include media-lap {
     position: fixed;
     top: 0;
     right: -100%;
-    z-index: 10;
+    z-index: 100;
     @include flex-col;
     gap: 16px;
     width: 620px;
@@ -36,10 +36,36 @@
   padding: 15px;
   @include font(2rem, 2rem, normal);
 
-  @include media-tab {
+  @include hov {
+    color: $color-main;
+  }
+
+  @include media-lap {
     @include font(3.5rem, 4.3rem, normal);
   }
   @include media-mm {
     @include font(3rem, 4rem, normal);
+  }
+}
+
+// ------------------------
+
+.light-theme {
+  .nav {
+    @include media-lap {
+      background: $color-light;
+    }
+  }
+
+  .nav__link {
+    @include hov {
+      color: $color-light;
+    }
+  }
+
+  .nav.active .nav__link {
+    @include hov {
+      color: $color-main;
+    }
   }
 }
