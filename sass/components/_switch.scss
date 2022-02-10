@@ -21,8 +21,6 @@
 
   @include hov {
     color: $color-main;
-    background: rgba(153, 153, 153, 0.2);
-    @extend %shadow;
   }
 
   &.active {
@@ -38,6 +36,10 @@
 // -------------------------------
 
 .light-theme .switch {
+  @include hov {
+    color: $color-light;
+  }
+
   &.active {
     color: $color-light;
   }
@@ -45,18 +47,30 @@
 
 .light-theme .switch-theme {
   padding: 4px;
+
+  .icon {
+    @include hov {
+      fill: $color-light;
+    }
+  }
 }
 
 .light-theme .header.scrolled {
   .switch {
     @include hov {
       color: $color-main;
-      background: $color-light;
-      box-shadow: none;
     }
 
     &.active {
       color: $color-main;
+    }
+  }
+
+  .switch-theme {
+    .icon {
+      @include hov {
+        fill: $color-main;
+      }
     }
   }
 }

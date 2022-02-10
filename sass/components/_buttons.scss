@@ -14,31 +14,63 @@
     background: $color-main;
   }
 
-  @include hov {
+  &:hover,
+  &:focus {
     color: $color-light;
+  }
+
+  &:active {
+    color: $color-main;
+    border-color: $color-light;
+    box-shadow: inset 0 0 0 50px $color-light;
+  }
+
+  &_special {
+    border: none;
+    &:hover,
+    &:focus {
+      color: $color-main;
+      box-shadow: inset 0 0 0 50px $color-light;
+    }
+    &:active {
+      color: $color-light;
+      box-shadow: inset 0 0 0 -50px $color-main;
+    }
   }
 }
 
+// -----------------------
+
 .light-theme .button {
   color: $color-lt-dark;
-  @include hov {
+  
+  &:hover,
+  &:focus {
     color: $color-main;
   }
 
   &_colored {
-    @include hov {
+    &:hover,
+    &:focus {
       color: $color-light;
-      background: $color-main;
     }
   }
 
-  &_light {
+  &_special {
+    border: none;
     background: $color-light;
-    border-color: $color-light;
-    @extend %shade-btn;
-    @include hov {
-      background: $color-light;
+    &:hover,
+    &:focus {
+      box-shadow: inset 0 0 0 50px $color-main;
+    }
+    &:active {
       color: $color-main;
+      box-shadow: inset 0 0 0 -50px $color-light;
     }
   }
+}
+
+.button-wrapper {
+  display: inline-block;
+  @extend %shadow;
 }

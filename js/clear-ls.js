@@ -1,6 +1,6 @@
 export const clearLS = () => {
-  if (!localStorage.getItem('new-user777')) {
+  if (!localStorage.getItem('user777')) {
     localStorage.clear();
+    localStorage.setItem('user777', 'hello!');
   }
-  localStorage.setItem('new-user777', 'hello!');
 };

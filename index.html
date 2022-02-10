@@ -74,7 +74,9 @@
             <p class="hero__text" data-int="hero-text">
               Save sincere emotions, romantic feelings and happy moments of life together with professional photographer Alexa Rise
             </p>
-            <button class="button button_colored button_light" data-int="hire">Hire me</button>
+            <div class="button-wrapper">
+              <button class="button button_colored button_special" data-int="hire">Hire me</button>
+            </div>
           </div>
         </div>
       </section>
@@ -192,10 +194,12 @@
           <h2 class="contacts__title" data-int="contact-me">Contact me</h2>
 
           <form class="contacts__form form" action="#" method="post">
-            <input name="email" type="email" placeholder="E-mail" data-int="email" autocomplete="on" />
-            <input name="phone" type="tel" placeholder="Phone" data-int="phone" autocomplete="on" />
-            <textarea name="message" cols="30" rows="10" placeholder="Message" data-int="message" autocomplete="on"></textarea>
-            <button type="button" class="button button_colored button_light" data-int="send-message">Send message</button>
+            <input name="email" type="email" placeholder="E-mail" data-int="email" autocomplete="off" />
+            <input name="phone" type="tel" placeholder="Phone" data-int="phone" autocomplete="off" />
+            <textarea name="message" cols="30" rows="10" placeholder="Message" data-int="message" autocomplete="off"></textarea>
+            <div class="button-wrapper">
+              <button type="button" class="button button_colored button_special" data-int="send-message">Send message</button>
+            </div>
           </form>
         </div>
       </section>

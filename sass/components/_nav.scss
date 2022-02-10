@@ -70,7 +70,7 @@
   }
 }
 
-.light-theme .header.active {
+.light-theme .header.scrolled {
   .nav__link {
     @include hov {
       color: $color-main;

@@ -54,7 +54,6 @@
   border: none;
   cursor: pointer;
   transform: translate(-50%, -50%);
-  @extend %trans;
 
   @include media-tab {
     width: 65px;

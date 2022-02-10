@@ -11,28 +11,22 @@
     outline: none;
     @extend %trans;
 
+    @include hov {
+      border-color: $color-light;
+    }
+
     &::placeholder {
       color: $color-main;
     }
 
-    @include hov {
-      border-color: $color-light;
+    &:focus::placeholder {
+      opacity: 0;
     }
   }
 
   input {
     height: 50px;
     margin-bottom: 20px;
-
-    &:-webkit-autofill {
-      border-color: $color-main;
-      -webkit-text-fill-color: $color-main;
-      transition: background-color 9000s ease-in-out 0s;
-
-      @include hov {
-        border-color: $color-light;
-      }
-    }
   }
 
   textarea {

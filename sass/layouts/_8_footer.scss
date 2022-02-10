@@ -25,9 +25,19 @@
   @include media-tab {
     margin-bottom: 16px;
   }
+
+  a {
+    @include hov {
+      color: $color-main;
+    }
+  }
 }
 
 .footer__link {
+  @include hov {
+    color: $color-main;
+  }
+
   @include media-tab {
     margin-bottom: 20px;
   }

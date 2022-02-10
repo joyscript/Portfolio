@@ -3,21 +3,21 @@
   max-height: 100%;
   fill: $color-light;
   @extend %trans;
-
-  &:hover {
+  @include hov {
     fill: $color-main;
   }
 }
 
 .light-theme .icon {
   fill: $color-lt-dark;
-  @extend %trans;
-
-  &:hover {
+  @include hov {
     fill: $color-main;
   }
 }
 
-.videoplayer__btn .icon {
+.light-theme .videoplayer__btn .icon {
   fill: $color-light;
+  @include hov {
+    fill: $color-main;
+  }
 }
