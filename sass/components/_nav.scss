@@ -21,10 +21,8 @@
     }
   }
 
-  @include media(760px) {
-    width: 100vw;
-  }
   @include media-mob {
+    width: 100vw;
     padding: 100px;
   }
   @include media-sm {

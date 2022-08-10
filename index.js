@@ -4,6 +4,7 @@ import { switchLang } from './js/switch-lang.js';
 import { switchTheme } from './js/switch-theme.js';
 import { switchPhotos } from './js/switch-photos.js';
 import { changeHeader } from './js/change-header.js';
+import { changeButtons } from './js/change-buttons.js';
 
 clearLS();
 switchMenu();
@@ -11,3 +12,4 @@ switchLang();
 switchTheme();
 switchPhotos();
 changeHeader();
+changeButtons();

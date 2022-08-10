@@ -3,8 +3,15 @@
   height: 40px;
   border-radius: 10px;
 
+  @include media-lap {
+    width: 48px;
+  }
+
+  @include media-mob {
+    width: 44px;
+  }
+
   @include media-sm {
     width: 40px;
-    height: 32px;
   }
 }

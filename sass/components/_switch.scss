@@ -1,7 +1,7 @@
 .switch-langs {
   display: flex;
   gap: 4px;
-  @include font(20px, 45px);
+  @include font(20px, 44px);
   text-transform: uppercase;
 
   @include media-mob {
@@ -10,8 +10,8 @@
 }
 
 .switch {
-  width: 45px;
-  height: 45px;
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;

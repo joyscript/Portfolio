@@ -1,3 +1,29 @@
+// Constants =================================
+$color-main: #bdae82;
+$color-dark: #000000;
+$color-light: #ffffff;
+
+$color-lt-dark: #1c1c1c;
+
+$wrapper-width: 1440px;
+$content-width: 1400px;
+
+// Placeholders ==============================
+
+%font-add {
+  font-family: 'Merriweather', Times, serif;
+}
+
+%trans {
+  transition: all 0.3s ease-in-out;
+}
+
+%shadow {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+// Mixins ===================================
+
 @mixin font($size, $height: $size * 2, $weight: bold, $color: inherit, $style: normal) {
   font-size: $size;
   line-height: $height;
@@ -14,6 +40,8 @@
   }
 }
 
+// Равномерное распределение колонок на основе ширины в процентах
+// Gap не задан, он также рассчитывается в %
 @mixin flex($width) {
   display: flex;
   flex-wrap: wrap;
@@ -24,6 +52,8 @@
   }
 }
 
+// Если нужно точное количество колонок и точный gap
+// Gap не будет уменьшаться, будет уменьшаться ширина колонок в %
 @mixin cols($cols, $gap) {
   display: flex;
   flex-wrap: wrap;

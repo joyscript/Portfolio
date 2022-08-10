@@ -20,7 +20,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="./sass/style.css" />
+    <link rel="stylesheet" href="sass/style.css" />
     <script type="module" src="index.js"></script>
   </head>
 
@@ -194,9 +194,9 @@
           <h2 class="contacts__title" data-int="contact-me">Contact me</h2>
 
           <form class="contacts__form form" action="#" method="post">
-            <input name="email" type="email" placeholder="E-mail" data-int="email" autocomplete="off" />
-            <input name="phone" type="tel" placeholder="Phone" data-int="phone" autocomplete="off" />
-            <textarea name="message" cols="30" rows="10" placeholder="Message" data-int="message" autocomplete="off"></textarea>
+            <input name="email" type="email" placeholder="E-mail" data-int="email" autocomplete="off" maxlength="30"/>
+            <input name="phone" type="tel" placeholder="Phone" data-int="phone" autocomplete="off" maxlength="20"/>
+            <textarea name="message" cols="30" rows="10" placeholder="Message" data-int="message" autocomplete="off" maxlength="300"></textarea>
             <div class="button-wrapper">
               <button type="button" class="button button_colored button_special" data-int="send-message">Send message</button>
             </div>
