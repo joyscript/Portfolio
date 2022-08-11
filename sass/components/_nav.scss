@@ -11,19 +11,19 @@
     gap: 16px;
     width: 620px;
     height: 100vh;
-    padding-top: 134px;
-    padding-left: 112px;
+    padding: 134px 60px 60px 112px;
     background: $color-dark;
     transition: 0.5s;
+    overflow: auto;
 
     &.active {
       right: 0;
     }
   }
 
-  @include media-mob {
+  @include media(767.98px) {
     width: 100vw;
-    padding: 100px;
+    padding: 90px 60px 60px 90px;
   }
   @include media-sm {
     padding: 60px;

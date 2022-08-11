@@ -2,27 +2,24 @@ export const switchPhotos = () => {
   const portfolioBtns = document.querySelector('.portfolio__buttons');
   const portfolioImages = document.querySelector('.portfolio__images');
 
-  const seasons = ['winter', 'spring', 'summer', 'autumn'];
   const seasonImages = { winter: [], spring: [], summer: [], autumn: [] };
 
-  const preloadImages = () => {
-    seasons.forEach((season) => {
-      for (let i = 1; i <= 6; i++) {
-        const img = new Image();
-        img.src = `./assets/img/portfolio/${season}/${i}.jpg`;
-        img.classList.add('portfolio__img');
-        seasonImages[season].push(img);
-      }
-    });
-  };
-
   const changeActiveBtn = (curActiveBtn) => {
-    const prevActiveBtn = document.querySelector('.portfolio__buttons .button_colored');
-    if (prevActiveBtn) prevActiveBtn.classList.remove('button_colored');
+    portfolioBtns.querySelectorAll('.button').forEach((btn) => btn.classList.remove('button_colored'));
     curActiveBtn.classList.add('button_colored');
   };
 
+  const loadImages = (season) => {
+    for (let i = 1; i <= 6; i++) {
+      const img = new Image();
+      img.src = `./assets/img/portfolio/${season}/${i}.jpg`;
+      img.classList.add('portfolio__img');
+      seasonImages[season].push(img);
+    }
+  };
+
   const renderImages = (season) => {
+    if (!seasonImages[season].length) loadImages(season);
     portfolioImages.innerHTML = '';
     seasonImages[season].forEach((img) => portfolioImages.append(img));
   };
@@ -40,9 +37,8 @@ export const switchPhotos = () => {
 
   window.addEventListener('load', () => {
     const season = localStorage.getItem('season') || 'autumn';
-    const curActiveBtn = document.querySelector(`.button[data-season=${season}]`);
+    const curActiveBtn = portfolioBtns.querySelector(`[data-season=${season}]`);
 
-    preloadImages();
     changeActiveBtn(curActiveBtn);
     renderImages(season);
   });

@@ -12,13 +12,13 @@ export const switchMenu = () => {
       document.body.style.overflow = 'hidden';
       document.body.addEventListener('click', closeMenu);
     } else {
-      document.body.style.overflow = 'auto';
+      document.body.style = '';
       document.body.removeEventListener('click', closeMenu);
     }
   };
 
   const closeMenu = (e) => {
-    if (e.target.classList.contains('nav__link') || !e.target.closest('.header__nav')) {
+    if (e.target.classList.contains('nav__link') || e.target.classList.contains('overlay')) {
       toggleMenu();
     }
   };
