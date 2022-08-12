@@ -804,12 +804,15 @@ button {
     flex-basis: 450px;
   }
 }
+.light-theme .modal .modal__dialog {
+  background-color: #ffffff;
+}
 .modal .modal__close {
   position: absolute;
   top: 8px;
   right: 14px;
   font-size: 40px;
-  opacity: 0.7;
+  opacity: 0.6;
   cursor: pointer;
 }
 .modal .modal__text {
