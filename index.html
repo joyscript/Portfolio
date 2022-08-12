@@ -129,9 +129,25 @@
 
           <div class="videoplayer">
             <picture>
-              <source srcset="./assets/img/video.webp" type="image/webp" />
-              <source srcset="./assets/img/video.jpg" type="image/jpeg" />
-              <img class="videoplayer__img" src="./assets/img/video.jpg" alt="Video" />
+              <source
+                type="image/webp"
+                class="videoplayer__img"
+                srcset="assets/img/video-480.webp 480w, assets/img/video-768.webp 768w, assets/img/video-1024.webp 1024w, assets/img/video.webp 1440w"
+                sizes="(max-width: 480px) 90vw, (max-width: 768px) 90vw, (max-width: 1024px) 90vw, 1400px"
+              />
+              <source
+                type="image/jpeg"
+                class="videoplayer__img"
+                srcset="assets/img/video-480.jpg 480w, assets/img/video-768.jpg 768w, assets/img/video-1024.jpg 1024w, assets/img/video.jpg 1440w"
+                sizes="(max-width: 480px) 90vw, (max-width: 768px) 90vw, (max-width: 1024px) 90vw, 1400px"
+              />
+              <img
+                class="videoplayer__img"
+                srcset="assets/img/video-480.jpg 480w, assets/img/video-768.jpg 768w, assets/img/video-1024.jpg 1024w, assets/img/video.jpg 1440w"
+                sizes="(max-width: 480px) 90vw, (max-width: 768px) 90vw, (max-width: 1024px) 90vw, 1400px"
+                src="assets/img/video.jpg"
+                alt="Video"
+              />
             </picture>
 
             <button class="videoplayer__btn">
