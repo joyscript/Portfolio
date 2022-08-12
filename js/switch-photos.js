@@ -1,27 +1,33 @@
 export const switchPhotos = () => {
   const portfolioBtns = document.querySelector('.portfolio__buttons');
-  const portfolioImages = document.querySelector('.portfolio__images');
+  const portfolioPics = document.querySelector('.portfolio__pictures');
 
-  const seasonImages = { winter: [], spring: [], summer: [], autumn: [] };
+  const seasonPics = { winter: [], spring: [], summer: [], autumn: [] };
 
   const changeActiveBtn = (curActiveBtn) => {
     portfolioBtns.querySelectorAll('.button').forEach((btn) => btn.classList.remove('button_colored'));
     curActiveBtn.classList.add('button_colored');
   };
 
-  const loadImages = (season) => {
+  const createPictures = (season) => {
     for (let i = 1; i <= 6; i++) {
-      const img = new Image();
-      img.src = `./assets/img/portfolio/${season}/${i}.jpg`;
-      img.classList.add('portfolio__img');
-      seasonImages[season].push(img);
+      const picture = document.createElement('picture');
+      const src = `./assets/img/portfolio/${season}/${i}.jpg`;
+      picture.classList.add('portfolio__pic');
+
+      picture.innerHTML = `
+        <source srcset=${src.slice(0, -3)}webp type="image/webp" />
+        <source srcset=${src} type="image/jpeg" />
+        <img src=${src} alt="Foto ${season}" />`;
+
+      seasonPics[season].push(picture);
     }
   };
 
   const renderImages = (season) => {
-    if (!seasonImages[season].length) loadImages(season);
-    portfolioImages.innerHTML = '';
-    seasonImages[season].forEach((img) => portfolioImages.append(img));
+    if (!seasonPics[season].length) createPictures(season);
+    portfolioPics.innerHTML = '';
+    seasonPics[season].forEach((img) => portfolioPics.append(img));
   };
 
   portfolioBtns.addEventListener('click', (e) => {

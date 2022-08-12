@@ -1,0 +1,81 @@
+.webp {
+  &.dark-theme {
+    .hero {
+      background-image: url('../assets/img/bgs/dark/bg-hero.webp');
+    }
+    .contacts {
+      background-image: url('../assets/img/bgs/dark/bg-contacts.webp');
+    }
+  }
+
+  &.light-theme {
+    .hero {
+      background-image: url('../assets/img/bgs/light/bg-hero.webp');
+    }
+    .contacts {
+      background-image: url('../assets/img/bgs/light/bg-contacts.webp');
+    }
+  }
+}
+
+.no-webp {
+  &.dark-theme {
+    .hero {
+      background-image: url('../assets/img/bgs/dark/bg-hero.jpg');
+    }
+    .contacts {
+      background-image: url('../assets/img/bgs/dark/bg-contacts.jpg');
+    }
+  }
+
+  &.light-theme {
+    .hero {
+      background-image: url('../assets/img/bgs/light/bg-hero.jpg');
+    }
+    .contacts {
+      background-image: url('../assets/img/bgs/light/bg-contacts.jpg');
+    }
+  }
+}
+
+@include media-tab {
+  .webp {
+    &.dark-theme {
+      .hero {
+        background-image: url('../assets/img/bgs/dark/bg-hero-tab.webp');
+      }
+      .contacts {
+        background-image: url('../assets/img/bgs/dark/bg-contacts-tab.webp');
+      }
+    }
+
+    &.light-theme {
+      .hero {
+        background-image: url('../assets/img/bgs/light/bg-hero-tab.webp');
+      }
+      .contacts {
+        background-image: url('../assets/img/bgs/light/bg-contacts-tab.webp');
+      }
+    }
+  }
+
+  .no-webp {
+    &.dark-theme {
+      .hero {
+        background-image: url('../assets/img/bgs/dark/bg-hero-tab.jpg');
+      }
+      .contacts {
+        background-image: url('../assets/img/bgs/dark/bg-contacts-tab.jpg');
+      }
+    }
+
+    &.light-theme {
+      .hero {
+        background-image: url('../assets/img/bgs/light/bg-hero-tab.jpg');
+      }
+      .contacts {
+        background-image: url('../assets/img/bgs/light/bg-contacts-tab.jpg');
+      }
+    }
+  }
+}

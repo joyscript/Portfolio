@@ -6,6 +6,18 @@ export const clearLS = () => {
 };
 
 // ---------------------------------------
+export const checkWebp = () => {
+  const isWebp = () => {
+    const webpImg = new Image();
+    webpImg.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
+    webpImg.onload = webpImg.onerror = () => document.body.classList.add(webpImg.height === 2 ? 'webp' : 'no-webp');
+  };
+
+  isWebp();
+
+  document.addEventListener('DOMContentLoaded', isWebp);
+};
+// ---------------------------------------
 
 export const fetchData = async (url, method, data) => {
   let res;

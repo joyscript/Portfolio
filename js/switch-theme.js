@@ -5,20 +5,22 @@ export const switchTheme = () => {
   const switchTheme = (theme) => {
     if (theme === 'light') {
       themeIcon.setAttribute('href', './assets/svg/sprite.svg#moon');
+      document.body.classList.remove('dark-theme');
       document.body.classList.add('light-theme');
-      localStorage.setItem('theme', 'light');
     } else {
       themeIcon.setAttribute('href', './assets/svg/sprite.svg#sun');
       document.body.classList.remove('light-theme');
-      localStorage.setItem('theme', 'dark');
+      document.body.classList.add('dark-theme');
     }
+
+    localStorage.setItem('theme', theme);
   };
 
   themeBtn.addEventListener('click', () => {
-    document.body.classList.contains('light-theme') ? switchTheme('dark') : switchTheme('light');
+    localStorage.getItem('theme') === 'light' ? switchTheme('dark') : switchTheme('light');
   });
 
   window.addEventListener('load', () => {
-    if (localStorage.getItem('theme') === 'light') switchTheme('light');
+    localStorage.getItem('theme') === 'light' ? switchTheme('light') : switchTheme('dark');
   });
 };

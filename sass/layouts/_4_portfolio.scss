@@ -13,8 +13,10 @@
   }
 }
 
-.portfolio__images {
-  @include flex(450px);
+.portfolio__pictures {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   row-gap: 25px;
   @include media-lap {
     justify-content: center;
@@ -22,12 +24,20 @@
   }
 }
 
-.portfolio__img {
-  width: calc(450 / 1400 * 100%);
+.portfolio__pic {
+  flex-basis: calc(450 / 1400 * 100%);
   @include media-lap {
-    width: calc(50% - 12.5px);
+    flex-basis: calc(50% - 12.5px);
   }
   @include media-tab {
+    flex-basis: 100%;
+  }
+
+  > * {
     width: 100%;
+    margin: 0 auto;
+    @include media-tab {
+      width: auto;
+    }
   }
 }

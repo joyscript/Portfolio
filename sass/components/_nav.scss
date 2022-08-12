@@ -22,7 +22,7 @@
   }
 
   @include media(767.98px) {
-    width: 100vw;
+    width: 100%;
     padding: 90px 60px 60px 90px;
   }
   @include media-sm {

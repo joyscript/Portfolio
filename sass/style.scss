@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Merriweather:wght@400;700&display=swap');
+
 // Base
 @import 'base/normalize';
 @import 'base/abstracts';
 @import 'base/basic';
+@import 'base/bg-images';
 
 // Components
 @import 'components/icons';

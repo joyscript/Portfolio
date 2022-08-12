@@ -1,7 +1,6 @@
 .contacts {
   width: 100%;
   min-height: 700px;
-  background-image: url('../assets/img/bgs/bg-contacts.jpg');
   background-repeat: no-repeat;
   background-position: center bottom;
 
@@ -14,7 +13,6 @@
   }
   @include media-tab {
     min-height: 600px;
-    background-image: url('../assets/img/bgs/bg-contacts-tab.jpg');
     background-position: center center;
   }
   @include media-mob {
@@ -50,15 +48,5 @@
 .contacts__form {
   @include media-tab {
     align-items: center;
-  }
-}
-
-// -------------------------
-
-.light-theme .contacts {
-  background-image: url('../assets/img/bgs/bg-contacts-lt.jpg');
-
-  @include media-tab {
-    background-image: url('../assets/img/bgs/bg-contacts-tab-lt.jpg');
   }
 }

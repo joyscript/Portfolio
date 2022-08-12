@@ -1,7 +1,6 @@
 .hero {
   width: 100%;
   min-height: 910px;
-  background-image: url('../assets/img/bgs/bg-hero.jpg');
   background-repeat: no-repeat;
   background-position: center top;
 
@@ -21,7 +20,6 @@
   }
   @include media-tab {
     min-height: 590px;
-    background-image: url('../assets/img/bgs/bg-hero-tab.jpg');
     background-position: center top;
   }
   @include media-mm {
@@ -67,14 +65,5 @@
   }
   @include media-sm {
     max-width: 250px;
-  }
-}
-
-// -------------------------------
-
-.light-theme .hero {
-  background-image: url('../assets/img/bgs/bg-hero-lt.jpg');
-  @include media-tab {
-    background-image: url('../assets/img/bgs/bg-hero-tab-lt.jpg');
   }
 }
