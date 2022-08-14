@@ -1,23 +1,29 @@
 .icon {
-  width: 100%;
-  max-height: 100%;
-  fill: $color-light;
+  max-width: none;
+  width: 100px;
+  height: 100px;
+  font-size: 1.6rem;
   @extend %trans;
+
   @include hov {
-    fill: $color-main;
+    @extend %filter;
   }
 }
 
-.light-theme .icon {
-  fill: $color-lt-dark;
-  @include hov {
-    fill: $color-main;
-  }
-}
+.light-theme {
+  .icon {
+    filter: invert(100%);
 
-.light-theme .videoplayer__btn .icon {
-  fill: $color-light;
-  @include hov {
-    fill: $color-main;
+    &_video {
+      filter: none;
+    }
+
+    &_soc {
+      filter: invert(70%);
+    }
+
+    @include hov {
+      @extend %filter;
+    }
   }
 }

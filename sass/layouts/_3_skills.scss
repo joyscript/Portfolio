@@ -50,18 +50,21 @@
   max-width: 100%;
   @include flex-col(center);
   padding: 100px 20px 10px;
+  background-size: 100px;
+  background-repeat: no-repeat;
+  background-position: top center;
 
   &:nth-child(1) {
-    background: url('../assets/svg/skills/camera.svg') no-repeat center top;
+    background-image: url('../assets/svg/sprite.svg#camera');
   }
   &:nth-child(2) {
-    background: url('../assets/svg/skills/video.svg') no-repeat center top;
+    background-image: url('../assets/svg/sprite.svg#video');
   }
   &:nth-child(3) {
-    background: url('../assets/svg/skills/image.svg') no-repeat center top;
+    background-image: url('../assets/svg/sprite.svg#image');
   }
   &:nth-child(4) {
-    background: url('../assets/svg/skills/mic.svg') no-repeat center top;
+    background-image: url('../assets/svg/sprite.svg#mic');
   }
 
   @include media-tab {

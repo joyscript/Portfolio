@@ -1,14 +1,14 @@
 export const switchTheme = () => {
-  const themeBtn = document.querySelector('.switch-theme');
-  const themeIcon = themeBtn.querySelector('.switch-theme__icon');
+  const themeBtn = document.querySelector('.switch_theme');
+  const themeIcon = themeBtn.querySelector('.icon');
 
   const switchTheme = (theme) => {
     if (theme === 'light') {
-      themeIcon.setAttribute('href', './assets/svg/sprite.svg#moon');
+      themeIcon.src = './assets/svg/sprite.svg#moon';
       document.body.classList.remove('dark-theme');
       document.body.classList.add('light-theme');
     } else {
-      themeIcon.setAttribute('href', './assets/svg/sprite.svg#sun');
+      themeIcon.src = './assets/svg/sprite.svg#sun';
       document.body.classList.remove('light-theme');
       document.body.classList.add('dark-theme');
     }

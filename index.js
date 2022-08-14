@@ -6,6 +6,7 @@ import { switchTheme } from './js/switch-theme.js';
 import { switchPhotos } from './js/switch-photos.js';
 import { changeHeader } from './js/change-header.js';
 import { changeButtons } from './js/change-buttons.js';
+import { videoplayer } from './js/videoplayer.js';
 import { sendData } from './js/send-data.js';
 
 clearLS();
@@ -16,4 +17,5 @@ switchTheme();
 switchPhotos();
 changeHeader();
 changeButtons();
+videoplayer();
 sendData();

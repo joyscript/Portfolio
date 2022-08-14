@@ -2,7 +2,6 @@
   display: flex;
   gap: 4px;
   @include font(20px, 44px);
-  text-transform: uppercase;
 
   @include media-mob {
     line-height: 40px;
@@ -12,12 +11,8 @@
 .switch {
   width: 44px;
   height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border-radius: 2px;
-  cursor: pointer;
-  @extend %trans;
+  transition-property: color;
 
   @include hov {
     color: $color-main;
@@ -27,9 +22,23 @@
     color: $color-main;
   }
 
-  @include media-sm {
-    width: 40px;
-    height: 40px;
+  &_lang {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    @include media-sm {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &_theme {
+    overflow: hidden;
+    @include media-sm {
+      transform: scale(0.91);
+    }
   }
 }
 
@@ -45,12 +54,14 @@
   }
 }
 
-.light-theme .switch-theme {
+.light-theme .switch_theme {
   padding: 4px;
 
   .icon {
+    width: 95px;
+    height: 95px;
     @include hov {
-      fill: $color-light;
+      filter: none;
     }
   }
 }
@@ -66,11 +77,9 @@
     }
   }
 
-  .switch-theme {
-    .icon {
-      @include hov {
-        fill: $color-main;
-      }
+  .switch_theme .icon {
+    @include hov {
+      @extend %filter;
     }
   }
 }

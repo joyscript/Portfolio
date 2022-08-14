@@ -15,11 +15,15 @@ $content-width: 1400px;
 }
 
 %trans {
-  transition: all 0.3s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
 %shadow {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+%filter {
+  filter: invert(19%) sepia(24%) saturate(424%) hue-rotate(7deg) brightness(84%) contrast(86%);
 }
 
 // Mixins ===================================

@@ -24,9 +24,7 @@
     <header class="header">
       <div class="wrapper header__wrapper">
         <a href="#" class="logo header__logo">
-          <svg class="icon">
-            <use xlink:href="./assets/svg/sprite.svg#logo"></use>
-          </svg>
+          <img src="assets/svg/sprite.svg#logo" class="icon" alt="Logo" />
         </a>
 
         <nav class="header__nav">
@@ -48,16 +46,14 @@
         </nav>
 
         <div class="switch-langs header__switch-langs">
-          <span class="switch switch_lang" data-lang="en">en</span>
+          <button class="switch switch_lang" data-lang="en">en</button>
           <span>/</span>
-          <span class="switch switch_lang" data-lang="ru">ru</span>
+          <button class="switch switch_lang" data-lang="ru">ru</button>
         </div>
 
-        <div class="switch switch-theme">
-          <svg class="icon">
-            <use class="switch-theme__icon" xlink:href="./assets/svg/sprite.svg#sun"></use>
-          </svg>
-        </div>
+        <button class="switch switch_theme">
+          <img src="assets/svg/sprite.svg#sun" class="icon" alt="Theme" />
+        </button>
       </div>
       <div class="overlay"></div>
     </header>
@@ -127,34 +123,43 @@
             <h2 data-int="video">Video</h2>
           </div>
 
-          <div class="videoplayer">
+          <div class="video__videoplayer">
+            <video class="videoplayer" src="assets/video/video.mp4"></video>
+
+            <div class="videoplayer__controls">
+              <button class="controls__btn play">
+                <img src="assets/svg/sprite.svg#play" class="icon icon_control" alt="Play video" />
+              </button>
+              <input class="controls__progress" type="range" value="40" min="0" max="100" step="1" />
+              <button class="controls__btn volume">
+                <img src="assets/svg/sprite.svg#volume" class="icon icon_control" alt="Play video" />
+              </button>
+              <input class="controls__volume" type="range" value="40" min="0" max="100" step="1" />
+            </div>
+
+            <button class="videoplayer__btn">
+              <img src="assets/svg/sprite.svg#play-btn" class="icon icon_video" alt="Play video" />
+            </button>
+
             <picture>
               <source
                 type="image/webp"
-                class="videoplayer__img"
-                srcset="assets/img/video-480.webp 480w, assets/img/video-768.webp 768w, assets/img/video-1024.webp 1024w, assets/img/video.webp 1440w"
-                sizes="(max-width: 480px) 90vw, (max-width: 768px) 90vw, (max-width: 1024px) 90vw, 1400px"
+                srcset="assets/video/poster-768.webp 768w, assets/video/poster.webp 1440w"
+                sizes="(max-width: 768px) 100vw, 1400px"
               />
               <source
                 type="image/jpeg"
-                class="videoplayer__img"
-                srcset="assets/img/video-480.jpg 480w, assets/img/video-768.jpg 768w, assets/img/video-1024.jpg 1024w, assets/img/video.jpg 1440w"
-                sizes="(max-width: 480px) 90vw, (max-width: 768px) 90vw, (max-width: 1024px) 90vw, 1400px"
+                srcset="assets/video/poster-768.jpg 768w, assets/video/poster.jpg 1440w"
+                sizes="(max-width: 768px) 100vw, 1400px"
               />
               <img
-                class="videoplayer__img"
-                srcset="assets/img/video-480.jpg 480w, assets/img/video-768.jpg 768w, assets/img/video-1024.jpg 1024w, assets/img/video.jpg 1440w"
-                sizes="(max-width: 480px) 90vw, (max-width: 768px) 90vw, (max-width: 1024px) 90vw, 1400px"
+                class="videoplayer__poster"
                 src="assets/img/video.jpg"
+                srcset="assets/video/poster-768.jpg 768w, assets/video/poster.jpg 1440w"
+                sizes="(max-width: 768px) 100vw, 1400px"
                 alt="Video"
               />
             </picture>
-
-            <button class="videoplayer__btn">
-              <svg class="icon">
-                <use xlink:href="./assets/svg/sprite.svg#play-video"></use>
-              </svg>
-            </button>
           </div>
         </div>
       </section>
@@ -213,7 +218,15 @@
           <form class="contacts__form form" action="#" method="post">
             <input name="email" type="email" placeholder="E-mail" data-int="email" autocomplete="on" maxlength="35" required />
             <input name="phone" type="tel" placeholder="Phone" data-int="phone" autocomplete="on" maxlength="20" required />
-            <textarea name="message" cols="30" rows="10" placeholder="Message" data-int="message" autocomplete="on" maxlength="300"></textarea>
+            <textarea
+              name="message"
+              cols="30"
+              rows="10"
+              placeholder="Message"
+              data-int="message"
+              autocomplete="on"
+              maxlength="300"
+            ></textarea>
             <div class="button-wrapper">
               <button class="button button_colored button_special" data-int="send-message">Send message</button>
             </div>
@@ -230,33 +243,26 @@
           <a href="https://github.com/joyscript" target="_blank">github</a>
         </div>
         <a class="footer__link" href="https://rs.school/js-stage0/" target="_blank">Rolling Scopes School</a>
+
         <ul class="soclist">
           <li class="soclist__item">
             <a href="#!" class="soclist__link">
-              <svg class="icon">
-                <use xlink:href="./assets/svg/sprite.svg#inst"></use>
-              </svg>
+              <img src="assets/svg/sprite.svg#inst" class="icon icon_soc" alt="Instagram" />
             </a>
           </li>
           <li class="soclist__item">
             <a href="#!" class="soclist__link">
-              <svg class="icon">
-                <use xlink:href="./assets/svg/sprite.svg#fb"></use>
-              </svg>
+              <img src="assets/svg/sprite.svg#fb" class="icon icon_soc" alt="Facebook" />
             </a>
           </li>
           <li class="soclist__item">
             <a href="#!" class="soclist__link">
-              <svg class="icon">
-                <use xlink:href="./assets/svg/sprite.svg#twit"></use>
-              </svg>
+              <img src="assets/svg/sprite.svg#twit" class="icon icon_soc" alt="Twitter" />
             </a>
           </li>
           <li class="soclist__item">
             <a href="#!" class="soclist__link">
-              <svg class="icon">
-                <use xlink:href="./assets/svg/sprite.svg#pint"></use>
-              </svg>
+              <img src="assets/svg/sprite.svg#pint" class="icon icon_soc" alt="Pinterest" />
             </a>
           </li>
         </ul>
