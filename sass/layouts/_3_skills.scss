@@ -55,16 +55,16 @@
   background-position: top center;
 
   &:nth-child(1) {
-    background-image: url('../assets/svg/sprite.svg#camera');
+    background-image: url('../assets/svg/sprite-skills.svg#camera');
   }
   &:nth-child(2) {
-    background-image: url('../assets/svg/sprite.svg#video');
+    background-image: url('../assets/svg/sprite-skills.svg#video');
   }
   &:nth-child(3) {
-    background-image: url('../assets/svg/sprite.svg#image');
+    background-image: url('../assets/svg/sprite-skills.svg#image');
   }
   &:nth-child(4) {
-    background-image: url('../assets/svg/sprite.svg#mic');
+    background-image: url('../assets/svg/sprite-skills.svg#mic');
   }
 
   @include media-tab {

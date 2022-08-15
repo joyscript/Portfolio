@@ -4,11 +4,11 @@ export const switchTheme = () => {
 
   const switchTheme = (theme) => {
     if (theme === 'light') {
-      themeIcon.src = './assets/svg/sprite.svg#moon';
+      themeIcon.src = './assets/svg/moon.svg';
       document.body.classList.remove('dark-theme');
       document.body.classList.add('light-theme');
     } else {
-      themeIcon.src = './assets/svg/sprite.svg#sun';
+      themeIcon.src = './assets/svg/sun.svg';
       document.body.classList.remove('light-theme');
       document.body.classList.add('dark-theme');
     }

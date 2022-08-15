@@ -23,8 +23,8 @@
   <body>
     <header class="header">
       <div class="wrapper header__wrapper">
-        <a href="#" class="logo header__logo">
-          <img src="assets/svg/sprite.svg#logo" class="icon" alt="Logo" />
+        <a href="#" class="logo header__logo" title="Logo">
+          <img src="assets/svg/logo.svg" class="icon" alt="Logo" />
         </a>
 
         <nav class="header__nav">
@@ -46,13 +46,13 @@
         </nav>
 
         <div class="switch-langs header__switch-langs">
-          <button class="switch switch_lang" data-lang="en">en</button>
+          <button class="switch switch_lang" data-lang="en">EN</button>
           <span>/</span>
-          <button class="switch switch_lang" data-lang="ru">ru</button>
+          <button class="switch switch_lang" data-lang="ru">RU</button>
         </div>
 
         <button class="switch switch_theme">
-          <img src="assets/svg/sprite.svg#sun" class="icon" alt="Theme" />
+          <img src="assets/svg/sun.svg" class="icon" alt="Theme" />
         </button>
       </div>
       <div class="overlay"></div>
@@ -124,21 +124,18 @@
           </div>
 
           <div class="video__videoplayer">
+            <!-- <video class="videoplayer" src="assets/video/video.mp4" preload="none"></video> -->
             <video class="videoplayer" src="assets/video/video.mp4"></video>
 
-            <div class="videoplayer__controls">
-              <button class="controls__btn play">
-                <img src="assets/svg/sprite.svg#play" class="icon icon_control" alt="Play video" />
-              </button>
-              <input class="controls__progress" type="range" value="40" min="0" max="100" step="1" />
-              <button class="controls__btn volume">
-                <img src="assets/svg/sprite.svg#volume" class="icon icon_control" alt="Play video" />
-              </button>
-              <input class="controls__volume" type="range" value="40" min="0" max="100" step="1" />
+            <div class="controls">
+              <button class="controls__btn play"></button>
+              <input class="controls__range progress" type="range" value="40" min="0" max="100" step="1" />
+              <button class="controls__btn volume active"></button>
+              <input class="controls__range volume" type="range" value="40" min="0" max="100" step="1" />
             </div>
 
             <button class="videoplayer__btn">
-              <img src="assets/svg/sprite.svg#play-btn" class="icon icon_video" alt="Play video" />
+              <img src="assets/svg/play-btn.svg" class="icon -socicon_video" alt="Play video" />
             </button>
 
             <picture>
@@ -154,7 +151,7 @@
               />
               <img
                 class="videoplayer__poster"
-                src="assets/img/video.jpg"
+                src="assets/video/poster.jpg"
                 srcset="assets/video/poster-768.jpg 768w, assets/video/poster.jpg 1440w"
                 sizes="(max-width: 768px) 100vw, 1400px"
                 alt="Video"
@@ -247,22 +244,22 @@
         <ul class="soclist">
           <li class="soclist__item">
             <a href="#!" class="soclist__link">
-              <img src="assets/svg/sprite.svg#inst" class="icon icon_soc" alt="Instagram" />
+              <img src="assets/svg/sprite-soc.svg#inst" class="icon icon_soc" alt="Instagram" />
             </a>
           </li>
           <li class="soclist__item">
             <a href="#!" class="soclist__link">
-              <img src="assets/svg/sprite.svg#fb" class="icon icon_soc" alt="Facebook" />
+              <img src="assets/svg/sprite-soc.svg#fb" class="icon icon_soc" alt="Facebook" />
             </a>
           </li>
           <li class="soclist__item">
             <a href="#!" class="soclist__link">
-              <img src="assets/svg/sprite.svg#twit" class="icon icon_soc" alt="Twitter" />
+              <img src="assets/svg/sprite-soc.svg#twit" class="icon icon_soc" alt="Twitter" />
             </a>
           </li>
           <li class="soclist__item">
             <a href="#!" class="soclist__link">
-              <img src="assets/svg/sprite.svg#pint" class="icon icon_soc" alt="Pinterest" />
+              <img src="assets/svg/sprite-soc.svg#pint" class="icon icon_soc" alt="Pinterest" />
             </a>
           </li>
         </ul>

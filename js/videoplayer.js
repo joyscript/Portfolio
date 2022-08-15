@@ -4,8 +4,6 @@ export const videoplayer = () => {
 
   const toggleAppearance = (btn, id1, id2) => {
     btn.classList.toggle('active');
-    let id = btn.classList.contains('active') ? id1 : id2;
-    btn.firstElementChild.src = `./assets/svg/sprite.svg#${id}`;
   };
 
   playBtn.addEventListener('click', () => {

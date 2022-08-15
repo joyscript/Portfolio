@@ -9,10 +9,18 @@
 }
 
 .switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 44px;
   height: 44px;
   border-radius: 2px;
   transition-property: color;
+
+  @include media-sm {
+    width: 40px;
+    height: 40px;
+  }
 
   @include hov {
     color: $color-main;
@@ -23,22 +31,7 @@
   }
 
   &_lang {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-transform: uppercase;
     font-weight: bold;
-    @include media-sm {
-      width: 40px;
-      height: 40px;
-    }
-  }
-
-  &_theme {
-    overflow: hidden;
-    @include media-sm {
-      transform: scale(0.91);
-    }
   }
 }
 
@@ -58,8 +51,6 @@
   padding: 4px;
 
   .icon {
-    width: 95px;
-    height: 95px;
     @include hov {
       filter: none;
     }

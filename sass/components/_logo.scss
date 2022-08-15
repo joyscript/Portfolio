@@ -2,17 +2,16 @@
   width: 50px;
   height: 40px;
   border-radius: 10px;
-  overflow: hidden;
 
   @include media-lap {
-    transform: scale(0.96);
+    width: 48px;
   }
 
   @include media-mob {
-    transform: scale(0.88);
+    width: 44px;
   }
 
   @include media-sm {
-    transform: scale(0.8);
+    width: 40px;
   }
 }

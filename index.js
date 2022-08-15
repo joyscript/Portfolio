@@ -14,7 +14,7 @@ checkWebp();
 switchMenu();
 switchLang();
 switchTheme();
-switchPhotos();
+// switchPhotos();
 changeHeader();
 changeButtons();
 videoplayer();
