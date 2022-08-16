@@ -166,6 +166,19 @@
     }
   }
 
+  &::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: $color-light;
+    cursor: ew-resize;
+
+    @include media-tab {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
   &.progress {
     flex-grow: 1;
     background: linear-gradient(to right, $color-main 0%, $color-main 0%, $color-gray 0%, $color-gray 100%);

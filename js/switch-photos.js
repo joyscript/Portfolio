@@ -1,7 +1,6 @@
 export const switchPhotos = () => {
   const portfolioBtns = document.querySelector('.portfolio__buttons');
-  const portfolioPics = document.querySelector('.portfolio__pictures');
-
+  const gallery = document.querySelector('.portfolio__gallery');
   const seasonPics = { winter: [], spring: [], summer: [], autumn: [] };
 
   const changeActiveBtn = (curActiveBtn) => {
@@ -9,11 +8,18 @@ export const switchPhotos = () => {
     curActiveBtn.classList.add('button_colored');
   };
 
+  const createGrid = () => {
+    for (let i = 1; i <= 6; i++) {
+      const picWrapper = document.createElement('div');
+      picWrapper.classList.add('picture-wrapper');
+      gallery.append(picWrapper);
+    }
+  };
+
   const createPictures = (season) => {
     for (let i = 1; i <= 6; i++) {
       const picture = document.createElement('picture');
       const src = `./assets/img/portfolio/${season}/${i}.jpg`;
-      picture.classList.add('portfolio__pic');
 
       picture.innerHTML = `
         <source srcset=${src.slice(0, -3)}webp type="image/webp" />
@@ -26,8 +32,7 @@ export const switchPhotos = () => {
 
   const renderImages = (season) => {
     if (!seasonPics[season].length) createPictures(season);
-    portfolioPics.innerHTML = '';
-    seasonPics[season].forEach((img) => portfolioPics.append(img));
+    gallery.querySelectorAll('.picture-wrapper').forEach((elem, ind) => elem.append(seasonPics[season][ind]));
   };
 
   portfolioBtns.addEventListener('click', (e) => {
@@ -44,7 +49,7 @@ export const switchPhotos = () => {
   window.addEventListener('load', () => {
     const season = localStorage.getItem('season') || 'autumn';
     const curActiveBtn = portfolioBtns.querySelector(`[data-season=${season}]`);
-
+    createGrid();
     changeActiveBtn(curActiveBtn);
     renderImages(season);
   });

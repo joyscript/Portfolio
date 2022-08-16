@@ -13,31 +13,32 @@
   }
 }
 
-.portfolio__pictures {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  row-gap: 25px;
+.portfolio__gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(auto, 450px));
+  justify-content: center;
+  gap: 25px;
+
   @include media-lap {
-    justify-content: center;
-    column-gap: 25px;
+    grid-template-columns: repeat(2, minmax(auto, 450px));
+  }
+
+  @include media-tab {
+    grid-template-columns: minmax(auto, 450px);
   }
 }
 
-.portfolio__pic {
-  flex-basis: calc(450 / 1400 * 100%);
-  @include media-lap {
-    flex-basis: calc(50% - 12.5px);
-  }
-  @include media-tab {
-    flex-basis: 100%;
-  }
+.picture-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: calc(560 / 450 * 100%);
 
-  > * {
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    margin: 0 auto;
-    @include media-tab {
-      width: auto;
-    }
+    height: 100%;
+    object-fit: cover;
   }
 }
