@@ -340,142 +340,6 @@ h4 {
   }
 }
 
-@font-face {
-  font-family: "icons";
-  src: url("../assets/fonts/icons.woff?afr8ys") format("woff"), url("../assets/fonts/icons.ttf?afr8ys") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
-}
-[class^=_icon-],
-[class*=" _icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icons" !important;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-._icon-logo:before {
-  content: "\e900";
-  color: #fff;
-}
-
-._icon-sun:before {
-  content: "\e901";
-  color: #fff;
-}
-
-._icon-moon:before {
-  content: "\e902";
-}
-
-._icon-camera .path1:before {
-  content: "\e903";
-  color: #ccba8d;
-}
-
-._icon-camera .path2:before {
-  content: "\e904";
-  margin-left: -1em;
-  color: #ccba8d;
-}
-
-._icon-camera .path3:before {
-  content: "\e905";
-  margin-left: -1em;
-  color: #ccba8d;
-}
-
-._icon-camera .path4:before {
-  content: "\e906";
-  margin-left: -1em;
-  color: #bdae82;
-}
-
-._icon-camera .path5:before {
-  content: "\e907";
-  margin-left: -1em;
-  color: #ccba8d;
-}
-
-._icon-video:before {
-  content: "\e908";
-  color: #bdae82;
-}
-
-._icon-image .path1:before {
-  content: "\e909";
-  color: #bdae82;
-}
-
-._icon-image .path2:before {
-  content: "\e90a";
-  margin-left: -1em;
-  color: #ccba8d;
-}
-
-._icon-mic .path1:before {
-  content: "\e90b";
-  color: #ccba8d;
-}
-
-._icon-mic .path2:before {
-  content: "\e90c";
-  margin-left: -1em;
-  color: #bdae82;
-}
-
-._icon-play-btn:before {
-  content: "\e90d";
-  color: #fff;
-}
-
-._icon-play:before {
-  content: "\e90e";
-  color: #b3b3b3;
-}
-
-._icon-pause:before {
-  content: "\e90f";
-  color: #b3b3b3;
-}
-
-._icon-volume:before {
-  content: "\e910";
-  color: #b3b3b3;
-}
-
-._icon-mute:before {
-  content: "\e911";
-  color: #b3b3b3;
-}
-
-._icon-fb:before {
-  content: "\e912";
-  color: #fff;
-}
-
-._icon-inst:before {
-  content: "\e913";
-  color: #fff;
-}
-
-._icon-pinterest:before {
-  content: "\e914";
-  color: #fff;
-}
-
-._icon-tw:before {
-  content: "\e915";
-  color: #fff;
-}
-
 .webp.dark-theme .hero {
   background-image: url("../assets/img/bgs/dark/bg-hero.webp");
 }
@@ -547,7 +411,6 @@ h4 {
 .logo {
   width: 50px;
   height: 40px;
-  border-radius: 10px;
 }
 @media (max-width: 1024px) {
   .logo {
@@ -609,6 +472,8 @@ h4 {
   font-weight: normal;
   font-style: normal;
   color: inherit;
+  color: #ffffff;
+  transition-property: color;
 }
 .nav__link:hover, .nav__link:focus, .nav__link:active {
   color: #bdae82;
@@ -637,6 +502,9 @@ h4 {
     background: #ffffff;
   }
 }
+.light-theme .nav__link {
+  color: #1c1c1c;
+}
 .light-theme .nav__link:hover, .light-theme .nav__link:focus, .light-theme .nav__link:active {
   color: #ffffff;
 }
@@ -652,10 +520,7 @@ h4 {
   display: flex;
   gap: 4px;
   font-size: 20px;
-  line-height: 44px;
-  font-weight: bold;
-  font-style: normal;
-  color: inherit;
+  line-height: 2.2;
 }
 @media (max-width: 600px) {
   .switch-langs {
@@ -664,13 +529,8 @@ h4 {
 }
 
 .switch {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 44px;
   height: 44px;
-  border-radius: 2px;
-  transition-property: color;
 }
 @media (max-width: 375px) {
   .switch {
@@ -678,20 +538,32 @@ h4 {
     height: 40px;
   }
 }
-.switch:hover, .switch:focus, .switch:active {
-  color: #bdae82;
-}
-.switch.active {
-  color: #bdae82;
-}
+
 .switch_lang {
+  color: #ffffff;
+  font-size: 20px;
+  line-height: inherit;
   font-weight: bold;
+  transition-property: color;
+}
+.switch_lang:hover, .switch_lang:focus, .switch_lang:active {
+  color: #bdae82;
+}
+.switch_lang.active {
+  color: #bdae82;
 }
 
-.light-theme .switch:hover, .light-theme .switch:focus, .light-theme .switch:active {
+.switch_theme {
+  transition: none;
+}
+
+.light-theme .switch_lang {
+  color: #1c1c1c;
+}
+.light-theme .switch_lang:hover, .light-theme .switch_lang:focus, .light-theme .switch_lang:active {
   color: #ffffff;
 }
-.light-theme .switch.active {
+.light-theme .switch_lang.active {
   color: #ffffff;
 }
 
@@ -1415,7 +1287,7 @@ h4 {
   margin-top: -30px;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s;
+  transition: opacity 0.25s;
 }
 @media (max-width: 600px) {
   .active .videoplayer__btn {

@@ -33,6 +33,8 @@
 .nav__link {
   padding: 12px 15px;
   @include font(2rem, 2rem, normal);
+  color: $color-light;
+  transition-property: color;
 
   @include hov {
     color: $color-main;
@@ -56,6 +58,7 @@
   }
 
   .nav__link {
+    color: $color-lt-dark;
     @include hov {
       color: $color-light;
     }

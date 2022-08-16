@@ -1,7 +1,8 @@
 .switch-langs {
   display: flex;
   gap: 4px;
-  @include font(20px, 44px);
+  font-size: 20px;
+  line-height: 2.2;
 
   @include media-mob {
     line-height: 40px;
@@ -9,18 +10,21 @@
 }
 
 .switch {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 44px;
   height: 44px;
-  border-radius: 2px;
-  transition-property: color;
 
   @include media-sm {
     width: 40px;
     height: 40px;
   }
+}
+
+.switch_lang {
+  color: $color-light;
+  font-size: 20px;
+  line-height: inherit;
+  font-weight: bold;
+  transition-property: color;
 
   @include hov {
     color: $color-main;
@@ -29,15 +33,17 @@
   &.active {
     color: $color-main;
   }
+}
 
-  &_lang {
-    font-weight: bold;
-  }
+.switch_theme {
+  transition: none;
 }
 
 // -------------------------------
 
-.light-theme .switch {
+.light-theme .switch_lang {
+  color: $color-lt-dark;
+
   @include hov {
     color: $color-light;
   }
