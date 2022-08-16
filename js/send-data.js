@@ -43,8 +43,4 @@ export const sendData = () => {
         form.reset();
       });
   });
-
-  document.querySelector('.hero .button').addEventListener('click', () => {
-    window.location = './index.html#contacts';
-  });
 };
