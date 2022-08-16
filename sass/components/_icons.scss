@@ -3,6 +3,7 @@
   height: 100%;
   font-size: 1.4rem;
   @extend %trans;
+  transition-property: filter;
 
   @include hov {
     @extend %filter;

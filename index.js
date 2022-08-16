@@ -18,4 +18,4 @@ switchTheme();
 changeHeader();
 changeButtons();
 videoplayer();
-sendData();
+// sendData();

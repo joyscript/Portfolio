@@ -59,7 +59,7 @@
     </header>
 
     <main>
-      <section class="hero" id="hero">
+      <!--<section class="hero" id="hero">
         <div class="wrapper hero__wrapper">
           <div class="hero__content">
             <h1 class="hero__title" data-int="hero-title">Alexa Rise</h1>
@@ -115,7 +115,7 @@
 
           <div class="portfolio__pictures"></div>
         </div>
-      </section>
+      </section> -->
 
       <section class="video" id="video">
         <div class="wrapper video__wrapper">
@@ -123,20 +123,19 @@
             <h2 data-int="video">Video</h2>
           </div>
 
-          <div class="video__videoplayer">
-            <!-- <video class="videoplayer" src="assets/video/video.mp4" preload="none"></video> -->
-            <video class="videoplayer" src="assets/video/video.mp4"></video>
+          <div class="videoplayer">
+            <video class="videoplayer__viewer" src="assets/video/video.mp4" preload="none"></video>
+
+            <button class="videoplayer__btn active">
+              <img src="assets/svg/play-btn.svg" class="icon icon_video" alt="Play video" />
+            </button>
 
             <div class="controls">
-              <button class="controls__btn play"></button>
-              <input class="controls__range progress" type="range" value="40" min="0" max="100" step="1" />
-              <button class="controls__btn volume active"></button>
+              <button class="controls__btn play-btn"></button>
+              <input class="controls__range progress" type="range" value="0" min="0" max="100" step="1" />
+              <button class="controls__btn volume-btn"></button>
               <input class="controls__range volume" type="range" value="40" min="0" max="100" step="1" />
             </div>
-
-            <button class="videoplayer__btn">
-              <img src="assets/svg/play-btn.svg" class="icon -socicon_video" alt="Play video" />
-            </button>
 
             <picture>
               <source
@@ -150,7 +149,7 @@
                 sizes="(max-width: 768px) 100vw, 1400px"
               />
               <img
-                class="videoplayer__poster"
+                class="videoplayer__poster active"
                 src="assets/video/poster.jpg"
                 srcset="assets/video/poster-768.jpg 768w, assets/video/poster.jpg 1440w"
                 sizes="(max-width: 768px) 100vw, 1400px"
