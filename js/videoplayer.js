@@ -1,7 +1,6 @@
 export const videoplayer = () => {
   const videoplayer = document.querySelector('.videoplayer');
   const video = videoplayer.querySelector('.videoplayer__viewer');
-  const poster = videoplayer.querySelector('.videoplayer__poster');
   const mainBtn = videoplayer.querySelector('.videoplayer__btn');
   const playBtn = videoplayer.querySelector('.play-btn');
   const volumeBtn = videoplayer.querySelector('.volume-btn');
@@ -22,13 +21,9 @@ export const videoplayer = () => {
   };
 
   const updateBtns = () => {
-    if (video.paused) {
-      mainBtn.classList.add('active');
-      playBtn.classList.remove('active');
-    } else {
-      mainBtn.classList.remove('active');
-      playBtn.classList.add('active');
-    }
+    [mainBtn, playBtn].forEach((btn) => {
+      video.paused ? btn.classList.add('paused') : btn.classList.remove('paused');
+    });
   };
 
   const toggleVideo = () => (video.paused ? playVideo() : pauseVideo());
@@ -61,8 +56,9 @@ export const videoplayer = () => {
   };
 
   mainBtn.addEventListener('click', () => {
-    poster.classList.remove('active');
-    mainBtn.classList.add('onvideo');
+    videoplayer.classList.add('active');
+    mainBtn.style.display = 'none';
+    setTimeout(() => (mainBtn.style.display = ''), 0);
     playVideo();
   });
 

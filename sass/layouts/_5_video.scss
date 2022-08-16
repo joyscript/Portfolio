@@ -13,75 +13,85 @@
 
 .videoplayer {
   position: relative;
+  width: 100%;
+  padding-top: calc(590 / 1280 * 100%);
   overflow: hidden;
+  border: none;
+
+  &.active {
+    border: 1px solid $color-main;
+
+    .light-theme & {
+      border-color: $color-dark;
+    }
+
+    @include media-lap {
+      border-left: none;
+      border-right: none;
+    }
+  }
 }
 
 .videoplayer__poster {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
-  display: none;
+  z-index: 2;
   width: 100%;
   height: 100%;
   object-fit: cover;
 
-  @include media-mob {
-    top: -20%;
-    width: 120%;
-    height: 120%;
-  }
-
-  &.active {
-    display: block;
+  .active & {
+    display: none;
   }
 }
 
 .videoplayer__viewer {
+  position: absolute;
+  top: 0;
+  left: -3px;
   display: block;
-  width: 100%;
-  height: 46.07%;
-  max-height: 645px;
-  object-fit: cover;
-  border: 1px solid $color-main;
-  border-bottom: none;
-
-  @include media-lap {
-    border-left: none;
-    border-right: none;
-  }
+  width: calc(100% + 6px);
+  height: auto;
 }
 
 .videoplayer__btn {
   position: absolute;
   top: 50%;
   left: 50%;
-  z-index: 2;
-  display: none;
+  z-index: 3;
   width: 130px;
   height: 130px;
   transform: translate(-50%, -50%);
   transition: none;
   outline-offset: 5px;
+  -webkit-tap-highlight-color: transparent;
 
   @include media-tab {
     width: 65px;
     height: 65px;
   }
 
-  &.active {
-    display: block;
-  }
-
-  &.onvideo {
+  .active & {
     margin-top: -30px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+
     @include media-mob {
       margin-top: -25px;
+    }
+
+    &.paused {
+      opacity: 1;
+      pointer-events: auto;
     }
   }
 }
 
 .controls {
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -90,13 +100,6 @@
   height: 60px;
   padding: 0 30px;
   background: $color-dark;
-  border: 1px solid $color-main;
-  border-top: none;
-
-  @include media-lap {
-    border-left: none;
-    border-right: none;
-  }
 
   @include media-tab {
     position: relative;
@@ -127,10 +130,11 @@
 }
 
 .play-btn {
-  background-image: url('../assets/svg/sprite-video.svg#play');
+  margin-left: -5px;
+  background-image: url('../assets/svg/sprite-video.svg#pause');
 
-  &.active {
-    background-image: url('../assets/svg/sprite-video.svg#pause');
+  &.paused {
+    background-image: url('../assets/svg/sprite-video.svg#play');
   }
 }
 
