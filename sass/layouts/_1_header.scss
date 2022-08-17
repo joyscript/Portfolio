@@ -11,6 +11,10 @@
     padding: 3px 0;
     background: $color-dark;
     box-shadow: 0px 1px 15px #3a3528;
+
+    @media (max-height: 400px) {
+      top: -50px;
+    }
   }
 }
 

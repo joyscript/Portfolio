@@ -7,10 +7,10 @@
     ]]></style>
   </defs>
 
-  <g class="sprite" id="play" transform="scale(1.2), translate(7 0)">
+  <g class="sprite" id="play" transform="scale(1.1), translate(7 2)">
     <path fill="#b3b3b3" d="M22.35 14.75L0 0C0 22.23 0 11.32 0 29.49L22.35 14.75Z"></path>
   </g>
-  <g class="sprite" id="pause" transform="translate(2 0)">
+  <g class="sprite" id="pause" transform="scale(0.9), translate(4 2)">
     <path fill="#b3b3b3" d="M15.047 34.594v-33.194c0-0.618-0.498-1.116-1.126-1.116h-6.607c-0.628 0-1.126 0.498-1.126 1.116v33.194c0 0.618 0.498 1.126 1.126 1.126h6.607c0.628 0 1.126-0.498 1.126-1.126z"></path>
     <path fill="#b3b3b3" d="M28.687 0.281h-6.607c-0.618 0-1.126 0.498-1.126 1.116v33.194c0 0.618 0.498 1.126 1.126 1.126h6.607c0.618 0 1.126-0.498 1.126-1.126v-33.194c0-0.618-0.498-1.116-1.126-1.116z"></path>
   </g>
