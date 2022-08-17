@@ -8,32 +8,34 @@ export const switchPhotos = () => {
     curActiveBtn.classList.add('button_colored');
   };
 
-  const createGrid = () => {
-    for (let i = 1; i <= 6; i++) {
-      const picWrapper = document.createElement('div');
-      picWrapper.classList.add('picture-wrapper');
-      gallery.append(picWrapper);
-    }
-  };
+  const preloadPictures = () => {
+    for (let season in seasonPics) {
+      for (let i = 1; i <= 6; i++) {
+        const picture = document.createElement('picture');
+        const src = `./assets/img/portfolio/${season}/${i}.jpg`;
 
-  const createPictures = (season) => {
-    for (let i = 1; i <= 6; i++) {
-      const picture = document.createElement('picture');
-      const src = `./assets/img/portfolio/${season}/${i}.jpg`;
-
-      picture.innerHTML = `
+        picture.innerHTML = `
         <source srcset=${src.slice(0, -3)}webp type="image/webp" />
         <source srcset=${src} type="image/jpeg" />
-        <img src=${src} alt="Foto ${season}" />`;
+        <img src=${src} alt="Foto ${season}"/>`;
 
-      seasonPics[season].push(picture);
+        seasonPics[season].push(picture);
+      }
     }
   };
 
-  const renderImages = (season) => {
-    if (!seasonPics[season].length) createPictures(season);
-    gallery.querySelectorAll('.picture-wrapper').forEach((elem, ind) => elem.append(seasonPics[season][ind]));
+  const renderPictures = (season) => {
+    gallery.innerHTML = '';
+    seasonPics[season].forEach((pic) => gallery.append(pic));
   };
+
+  window.addEventListener('load', () => {
+    const season = localStorage.getItem('season') || 'autumn';
+    const curActiveBtn = portfolioBtns.querySelector(`[data-season=${season}]`);
+    changeActiveBtn(curActiveBtn);
+    preloadPictures();
+    renderPictures(season);
+  });
 
   portfolioBtns.addEventListener('click', (e) => {
     if (e.target.classList.contains('button')) {
@@ -41,16 +43,8 @@ export const switchPhotos = () => {
       const season = clickedBtn.dataset.season;
 
       changeActiveBtn(clickedBtn);
-      renderImages(season);
+      renderPictures(season);
       localStorage.setItem('season', season);
     }
-  });
-
-  window.addEventListener('load', () => {
-    const season = localStorage.getItem('season') || 'autumn';
-    const curActiveBtn = portfolioBtns.querySelector(`[data-season=${season}]`);
-    createGrid();
-    changeActiveBtn(curActiveBtn);
-    renderImages(season);
   });
 };

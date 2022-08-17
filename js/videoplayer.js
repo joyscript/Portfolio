@@ -62,6 +62,8 @@ export const videoplayer = () => {
     playVideo();
   });
 
+  window.addEventListener('load', () => video.load());
+
   video.addEventListener('click', toggleVideo);
   video.addEventListener('timeupdate', updateProgress);
 
